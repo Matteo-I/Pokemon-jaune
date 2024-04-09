@@ -1,0 +1,191 @@
+ID_Pokemon,NB_Pokedex,Nom,Forme,Classification,Type_1,Type_2,Base_XP,Type_XP,Evolution_lvl,Taille,Poids,Couleur,Pv,For,Def,Vit,Spe,Capture_Rate,Description
+153,1,BULBIZARRE,GRASS,Graine,Plante,Poison,64,Medium Slow,16,"0,7","6,9",Vert,45,49,49,45,65,45,Il peut survivre plusieurs jours sans manger. Le bulbe sur son dos emmagasine de l'énergie.
+9,2,HERBIZARRE,GRASS,Graine,Plante,Poison,142,Medium Slow,32,1,13,Vert,60,62,63,60,80,45,"En emmagasinant de l'énergie, son bulbe grossit. Il en émane un arôme quand il va éclore."
+154,3,FLORIZARRE,GRASS,Graine,Plante,Poison,263,Medium Slow,None,2,100,Vert,80,82,83,80,100,45,Les pétales de sa fleur dorsale absorbent les rayons du soleil pour en faire de l'énergie.
+176,4,SALAMÈCHE,MONSTER,Lézard,Feu,None,62,Medium Slow,16,"0,6","8,5",Rouge,39,52,43,65,50,45,La flammèche au bout de sa queue émet un son crépitant audible seulement dans un endroit calme.
+178,5,REPTINCEL,MONSTER,Flamme,Feu,None,142,Medium Slow,36,"1,1",19,Rouge,58,64,58,80,65,45,"Ce Pokémon est violent. Dans la furie d'un combat, son aura brille d'une flamme bleutée."
+180,6,DRACAUFEU,MONSTER,Flamme,Feu,Vol,267,Medium Slow,None,"1,7","90,5",Rouge,78,84,78,100,85,45,"Quand il crache son souffle brûlant, la flamme au bout de sa queue s'embrase."
+177,7,CARAPUCE,WATER,Minitortue,Eau,None,63,Medium Slow,16,"0,5",9,Bleu,44,48,65,43,50,45,"Caché sous l'eau, il crache un jet d'eau sur sa proie et se cache à l'intérieur de sa coquille."
+179,8,CARABAFFE,WATER,Tortue,Eau,None,142,Medium Slow,36,1,"22,5",Bleu,59,63,80,58,65,45,"Attaqué, il cache sa tête dans sa carapace, mais son corps trop gros ne peut y tenir en entier."
+28,9,TORTANK,WATER,Carapace,Eau,None,265,Medium Slow,None,"1,6","85,5",Bleu,79,83,100,78,85,45,"Une fois sa cible alignée, il projette des jets d'eau plus puissants qu'une lance à incendie."
+123,10,CHENIPAN,BUG,Ver,Insecte,None,39,Medium Fast,7,"0,3","2,9",Vert,45,30,35,45,20,255,"Quand on touche l'appendice sur son front, il sécrète un gaz puant pour se protéger"
+124,11,CHRYSACIER,BUG,Cocon,Insecte,None,72,Medium Fast,10,"0,7","9,9",Vert,50,20,55,30,25,120,Il renforce sa carapace pour se protéger. Mais un coup puissant peut le déloger de son armure.
+125,12,PAPILUSION,BUG,Papillon,Insecte,Vol,198,Medium Fast,None,"1,1",32,Blanc,60,45,50,70,80,45,Ses ailes sont enduites d'une poudre toxique imperméable. Il peut voler sous la pluie.
+112,13,ASPICOT,BUG,Insectopic,Insecte,Poison,39,Medium Fast,7,"0,3","3,2",Brun,40,35,30,50,20,255,Prenez garde à la pique empoisonnée sur son front. Il se cache dans les buissons et les hautes herbes.
+113,14,COCONFORT,BUG,Cocon,Insecte,Poison,72,Medium Fast,10,"0,6",10,Jaune,45,25,50,35,25,120,"Il se déplace très lentement. Menacé, il sort son aiguillon et empoisonne ses ennemis."
+114,15,DARDARGNAN,BUG,Guêpoison,Insecte,Poison,198,Medium Fast,None,1,"29,5",Jaune,65,80,40,75,45,45,Il se sert de ses trois aiguillons empoisonnés pour attaquer sans relâche ses adversaires.
+36,16,ROUCOOL,BIRD,Minioiseau,Normal,Vol,50,Medium Slow,18,"0,3","1,8",Brun,40,45,40,56,35,255,"De nature très docile, il préfère jeter du sable pour se défendre plutôt qu'attaquer."
+150,17,ROUCOUPS,BIRD,Oiseau,Normal,Vol,122,Medium Slow,36,"1,1",30,Brun,63,60,55,71,50,120,Ce Pokémon est très vivace. Il survole en permanence son territoire pour chasser.
+151,18,ROUCARNAGE,BIRD,Oiseau,Normal,Vol,240,Medium Slow,None,"1,5","39,5",Brun,83,80,75,91,70,45,Ce Pokémon vole à Mach 2 quand il chasse. Ses grandes griffes sont des armes redoutables.
+165,19,RATTATA,QUADRUPED,Souris,Normal,None,51,Medium Fast,20,"0,3","3,5",Violet,30,56,35,72,25,255,"Il peut ronger n'importe quoi. Quand on en voit un, il y en a certainement quarante dans le coin."
+166,20,RATTATAC,QUADRUPED,Souris,Normal,None,145,Medium Fast,None,"0,7","18,5",Brun,55,81,60,97,50,127,Ses pattes sont palmées. Il peut poursuivre sa proie à travers les cours d'eau et les rivières.
+5,21,PIAFABEC,BIRD,Minoiseau,Normal,Vol,52,Medium Fast,20,"0,3",2,Brun,40,60,30,70,31,255,"Incapable de voler à haute altitude, il se déplace très vite pour protéger son territoire."
+35,22,RAPASDEPIC,BIRD,Bec-Oiseau,Normal,Vol,155,Medium Fast,None,"1,2",38,Brun,65,90,65,100,61,90,"Un Pokémon à qui on ne la fait pas. S'il sent du danger, il fuit instantanément et à toute vitesse."
+108,23,ABO,SNAKE,Serpent,Poison,None,58,Medium Fast,22,2,"6,9",Violet,35,60,44,55,40,255,"Plus il est âgé, plus son corps est long. Il se love autour des arbres pour se reposer."
+45,24,ARBOK,SNAKE,Cobra,Poison,None,157,Medium Fast,None,"3,5",65,Violet,60,85,69,80,65,90,Des études menées sur les motifs effrayants de son corps ont révélé six variations différentes.
+84,25,PIKACHU,PIKACHU,Souris,Electrik,None,112,Medium Fast,None,"0,4",6,Jaune,35,55,30,90,50,190,"Sa queue est dressée quand il est aux aguets. Si vous tirez dessus, il vous mordra."
+85,26,RAICHU,PIKACHU,Souris,Electrik,None,243,Medium Fast,None,"0,8",30,Jaune,60,90,55,100,90,75,Il devient tout excité quand il emmagasine de l'électricité. Il brille alors dans le noir.
+96,27,SABELETTE,MONSTER,Souris,Sol,None,60,Medium Fast,22,"0,6",12,Jaune,50,75,85,40,30,255,"Son corps est sec. Quand la nuit déploie ses ailes de fraîcheur, son épiderme se couvre de rosée."
+97,28,SABLAIREAU,MONSTER,Souris,Sol,None,158,Medium Fast,None,1,"29,5",Jaune,75,100,110,65,55,90,"Ses griffes sont redoutables. Si l'une d'elles se casse, elle repoussera en un jour."
+15,29,NIDORAN♀,MONSTER,Vénépic,Poison,None,55,Medium Slow,16,"0,4",7,Bleu,55,47,52,41,40,235,Un Pokémon paisible qui n'aime pas se battre. Ses petites cornes sont empoisonnées.
+168,30,NIDORINA,MONSTER,Vénépic,Poison,None,128,Medium Slow,None,"0,8",20,Bleu,70,62,67,56,55,120,"Caché au fond de son terrier, ses cornes se rétractent. C'est la preuve qu'il est au repos"
+16,31,NIDOQUEEN,MONSTER,Perceur,Poison,Sol,253,Medium Slow,None,"1,3",60,Bleu,90,82,87,76,75,45,Son corps musclé est recouvert de lourdes écailles. Elles poussent selon un cycle et un ordre précis.
+3,32,NIDORAN♂,MONSTER,Vénépic,Poison,None,55,Medium Slow,16,"0,5",9,Violet,46,57,40,50,40,235,"Ses grandes oreilles sont toujours dressées. S'il est menacé, il se défend avec un dard venimeux."
+167,33,NIDORINO,MONSTER,Vénépic,Poison,None,128,Medium Slow,None,"0,9","19,5",Violet,61,72,57,65,55,120,"Ses cornes sont venimeuses. Si elles touchent un ennemi, elles lui injectent un poison violent."
+7,34,NIDOKING,MONSTER,Perceur,Poison,Sol,253,Medium Slow,None,"1,4",62,Violet,81,92,77,85,75,45,Ses charges sont dévastatrices grâce à sa peau d'acier. Ses cornes percent même le diamant.
+4,35,MÉLOFÉE,FAIRY,Fée,Normal,None,113,Fast,None,"0,6","7,5",Rose,70,45,48,35,60,150,"Adoré pour son aspect mignon et joyeux, il est considéré comme rare. On en voit très peu."
+142,36,MÉLODELFE,FAIRY,Fée,Normal,None,242,Fast,None,"1,3",40,Rose,95,70,73,60,85,25,Il défend son habitat avec courage. C'est une sorte de fée qui ne se montre que rarement.
+82,37,GOUPIX,QUADRUPED,Renard,Feu,None,60,Medium Fast,None,"0,6","9,9",Brun,38,41,40,65,65,190,Sa fourrure et sa queue sont magnifiques. En grandissant sa queue se divise en six.
+83,38,FEUNARD,QUADRUPED,Renard,Feu,None,177,Medium Fast,None,"1,1","19,9",Jaune,73,76,75,100,100,75,"Selon la légende, neuf esprits se sont unis et incarnés dans ce Pokémon mystérieux et magique."
+100,39,RONDOUDOU,FAIRY,Bouboule,Normal,None,95,Fast,None,"0,5","5,5",Rose,115,45,20,20,25,170,Son regard déstabilise ses adversaires. Il chante ensuite une berceuse qui les endort.
+101,40,GRODOUDOU,FAIRY,Bouboule,Normal,None,218,Fast,None,1,12,Rose,140,70,45,45,50,50,Son corps est malléable. En aspirant de l'air il se gonfle dans des proportions gigantesques.
+107,41,NOSFERAPTI,MONSTER,Chovsouris,Poison,Vol,49,Medium Fast,22,"0,8","7,5",Violet,40,45,35,55,40,255,Il se dirige avec des ultrasons qui lui servent de sonar pour éviter les obstacles sur son trajet.
+130,42,NOSFERALTO,MONSTER,Chovsouris,Poison,Vol,159,Medium Fast,None,"1,6",55,Violet,75,80,70,90,75,90,Il attrape par surprise et sans crier gare. Ses longues dents lui servent à sucer le sang.
+185,43,MYSTHERBE,GRASS,Racine,Plante,Poison,64,Medium Slow,21,"0,5","5,4",Bleu,45,50,55,30,75,255,"Il est souvent confondu avec un radis noir. Si on essaie de le soulever du sol, il hurle."
+186,44,ORTIDE,GRASS,Racine,Plante,Poison,138,Medium Slow,None,"0,8","8,6",Bleu,60,65,70,40,85,120,Il sent très mauvais! Mais une personne sur mille aime la puanteur de son corps nauséabond.
+187,45,RAFFLÉSIA,GRASS,Fleur,Plante,Poison,245,Medium Slow,None,"1,2","18,6",Rouge,75,80,85,50,100,45,Il fait un bruit sourd quand il secoue ses pétales pour disperser son pollen empoisonné.
+109,46,PARAS,BUG,Champignon,Insecte,Plante,57,Medium Fast,24,"0,3","5,4",Rouge,35,70,55,25,55,190,Il s'enfuit sous terre pour ronger des racines afin de nourrir le champignon sur son dos.
+46,47,PARASECT,BUG,Champignon,Insecte,Plante,142,Medium Fast,None,1,"29,5",Rouge,60,95,80,30,80,75,Le champignon absorbe son hôte insectoïde. Il semble doué de facultés intellectuelles.
+65,48,MIMITOSS,BUG,Vermine,Insecte,Poison,61,Medium Fast,31,1,30,Violet,60,55,50,45,40,190,"Ses grands yeux lui servent de radar. En pleine lumière, on peut y distinguer des facettes."
+119,49,AÉROMITE,BUG,Papipoison,Insecte,Poison,158,Medium Fast,None,"1,5","12,5",Violet,70,65,60,90,90,75,Les éailles de ses ailes sont inamovibles. Elles libèrent un poison violent au contact.
+59,50,TAUPIQUEUR,MONSTER,Taupe,Sol,None,53,Medium Fast,28,"0,2","0,8",Brun,10,55,25,95,45,255,Il aime les lieux sombres. Il passe la majeure partie du temps sous terre ou dans des cavernes.
+118,51,TRIOPIKEUR,MONSTER,Taupe,Sol,None,149,Medium Fast,None,"0,7","33,3",Brun,35,80,50,120,70,50,"Quand un de ces triplets creuse à plus de quatre-vingt-dix kilomètres-heure, il provoque des tremblements de terre."
+77,52,MIAOUSS,MONSTER,Chadégout,Normal,None,58,Medium Fast,28,"0,4","4,2",Jaune,40,45,35,90,40,255,Il est surtout actif la nuit. Il aime chaparder les objets ronds et brillants.
+144,53,PERSIAN,MONSTER,Chadeville,Normal,None,154,Medium Fast,None,1,32,Jaune,65,70,60,115,65,90,Sa démarche est souple et majestueuse. La pierre sur son front brille de mille feux.
+47,54,PSYKOKWAK,MONSTER,Canard,Eau,None,64,Medium Fast,33,"0,8","19,6",Jaune,50,52,48,55,50,190,Il est victime de violents maux de tête. Il utilise ses pouvoirs psy de façon discrète.
+128,55,AKWAKWAK,MONSTER,Canard,Eau,None,175,Medium Fast,None,"1,7","76,6",Bleu,80,82,78,85,80,75,Ses membres fins et longs sont terminés par des nageoires qui lui permettent de nager élégamment.
+57,56,FÉROSINGE,MONSTER,Porsinge,Combat,None,61,Medium Fast,28,"0,5",28,Brun,40,80,35,70,35,190,"Agile et rapide, ce Pokémon vit dans les arbres. Il est féroce et ne refuse jamais un combat."
+117,57,COLOSSINGE,MONSTER,Porsinge,Combat,None,159,Medium Fast,None,1,32,Brun,65,105,60,95,60,75,Sa fureur prend fin quand il n'a plus personne à frapper. Il est difficile d'en être témoin.
+33,58,CANINOS,QUADRUPED,Chiot,Feu,None,70,Slow,None,"0,7",19,Brun,55,70,45,60,50,190,Ce Pokémon est de nature amicale. Mais il devient hargneux quand son territoire est menacé.
+20,59,ARCANIN,QUADRUPED,Légendaire,Feu,None,194,Slow,None,"1,9",155,Brun,90,110,80,95,80,75,Un Pokémon légendaire en Chine. Il est admiré pour la grâce et la beauté de sa course.
+71,60,PTITARD,MONSTER,Têtard,Eau,None,60,Medium Slow,None,"0,6","12,4",Bleu,40,50,40,90,40,255,Le sens de la spirale sur son ventre diffère selon son origine. Il préfère la nage à la marche.
+110,61,TÉTARTE,MONSTER,Têtard,Eau,None,135,Medium Slow,None,1,20,Bleu,65,65,65,90,50,120,"Attaqué, il se sert de sa spirale pour endormir sa proie. Il peut ainsi s'enfuir."
+111,62,TARTARD,MONSTER,Têtard,Eau,Combat,255,Medium Slow,None,"1,3",54,Bleu,90,85,95,70,70,45,Son corps très musclé lui permet de nager plus rapidement qu'un champion olympique.
+148,63,ABRA,MONSTER,Psy,Psy,None,62,Medium Slow,16,"0,9","19,5",Brun,25,20,15,90,105,200,"Il dort dix-huit heures par jour. En cas de danger, il se téléporte vers un lieu sûr, même s'il est assoupi."
+38,64,KADABRA,MONSTER,Psy,Psy,None,140,Medium Slow,None,"1,3","56,5",Brun,40,35,30,105,120,100,"Sa présence cause des évènements étranges, comme des pendules marchant à l'envers."
+149,65,ALAKAZAM,MONSTER,Psy,Psy,None,250,Medium Slow,None,"1,5",48,Brun,55,50,45,120,135,50,"Ce Pokémon est très intelligent. Sa mémoire est immense, il retient tout ce qu'il apprend."
+106,66,MACHOC,MONSTER,Colosse,Combat,None,61,Medium Slow,28,"0,8","19,5",Gris,70,80,50,35,35,180,"Très puissant malgré sa petite taille, il est passé maître en plusieurs types d'arts martiaux."
+41,67,MACHOPEUR,MONSTER,Colosse,Combat,None,142,Medium Slow,None,"1,5","70,5",Gris,80,100,70,45,50,90,"Sa ceinture sert à retenir son énergie. Sans elle, il serait invincible et incontrôlable."
+126,68,MACKOGNEUR,MONSTER,Colosse,Combat,None,253,Medium Slow,None,"1,6",130,Gris,90,130,80,55,65,45,Un seul de ses bras peut bouger une montagne. Rien ne résiste aux quatre bras en même temps.
+188,69,CHÉTIFLOR,GRASS,Fleur,Plante,Poison,60,Medium Slow,21,"0,7",4,Vert,50,75,35,40,70,255,Il préfère les endroits chauds et humides. Il capture sa proie avec ses lianes pour la dévorer.
+189,70,BOUSTIFLOR,GRASS,Carnivore,Plante,Poison,137,Medium Slow,None,1,"6,4",Vert,65,90,50,55,85,120,Il peut avaler et digérer n'importe quoi grâce à l'hyperacidité de son estomac vorace.
+190,71,EMPIFLOR,GRASS,Carnivore,Plante,Poison,245,Medium Slow,None,"1,7","15,5",Vert,80,105,65,70,100,45,Il attire sa proie avec une odeur de miel et l'avale en entier. Il la digère en un seul jour.
+24,72,TENTACOOL,WATER,Mollusque,Eau,Poison,67,Slow,30,"0,9","45,5",Bleu,40,40,35,70,100,190,Certains échouent sur la plage et sèchent sur le sable. Poussez-les dans l'eau et ils revivent.
+155,73,TENTACRUEL,WATER,Mollusque,Eau,Poison,180,Slow,None,"1,6",55,Bleu,80,70,65,100,120,60,Ses quatre-vingt tentacules sont extensibles et autonomes. Ils inoculent un poison au contact.
+169,74,RACAILLOU,MONSTER,Roche,Roche,Sol,60,Medium Slow,25,"0,4",20,Brun,40,80,100,20,30,255,"On en trouve près des sentiers de montagne. Si vous marchez dessus, ils s'énervent et attaquent."
+39,75,GRAVALANCHE,MONSTER,Roche,Roche,Sol,137,Medium Slow,None,1,105,Brun,55,95,115,35,45,120,"Il dévale les pentes le long des montagnes, et traverse les obstacles en les pulvérisant."
+49,76,GROLEM,MONSTER,Titanesque,Roche,Sol,248,Medium Slow,None,"1,4",300,Brun,80,110,130,45,55,45,"Son corps est blanc et tendre. Au contact de l'air, sa peau se solidifie en une armure."
+163,77,PONYTA,QUADRUPED,Cheval Feu,Feu,None,82,Medium Fast,None,1,30,Jaune,50,85,55,90,65,190,"Capable de sauter très haut, ses sabots et ses pattes peuvent absorber l'impact de l'atterrissage."
+164,78,GALOPA,QUADRUPED,Cheval Feu,Feu,None,175,Medium Fast,None,"1,7",95,Jaune,65,100,70,105,80,60,Il aime la course. Il poursuit tout ce qui va plus vite que lui. Question d'honneur.
+37,79,RAMOLOSS,QUADRUPED,Crétin,Eau,Psy,63,Medium Fast,37,"1,2",36,Rose,90,65,65,15,40,190,"Lent et stupide, il aime se la couler douce en observant l'activité autour de lui."
+8,80,FLAGADOSS,MONSTER,Symbiose,Eau,Psy,172,Medium Fast,None,"1,6","78,5",Rose,95,75,110,30,80,75,"Il se prélasse au soleil. Si le Kokiyas, accroché à sa queue s'en va, il redevient un Ramoloss."
+173,81,MAGNÉTI,BALL,Magnétique,Electrik,None,65,Medium Fast,30,"0,3",6,Gris,25,35,70,45,95,190,Sa nature défie les lois de la gravité. Il flotte grâce à un champ électromagnétique.
+54,82,MAGNÉTON,BALL,Magnétique,Electrik,None,163,Medium Fast,None,1,60,Gris,50,60,95,70,120,60,Il émet un signal radio étrange. Sa présence augmente la température de un degré dans un rayon de un kilomètre.
+64,83,CANARTICHO,BIRD,Canard Fou,Normal,Vol,132,Medium Fast,None,"0,8",15,Brun,52,65,55,60,58,45,"Ils vivent près des roseaux. On en voit peu, ils sont peut-être en voie d'extinction."
+70,84,DODUO,BIRD,Duoiseau,Normal,Vol,62,Medium Fast,31,"1,4","39,2",Brun,35,85,45,75,35,190,"Ses petites ailes ne lui permettent pas de voler, mais il peut courir très rapidement."
+116,85,DODRIO,BIRD,Trioiseau,Normal,Vol,165,Medium Fast,None,"1,8","85,2",Brun,60,110,70,100,60,45,"Quand une des deux têtes d'un Doduo se divise, il devient un Dodrio capable de courir à soixante kilomètres-heure"
+58,86,OTARIA,WATER,Otarie,Eau,None,65,Medium Fast,34,"1,1",90,Blanc,65,45,55,45,70,190,Il est à l'aise dans les endroits froids et gelés. Il peut nager dans l'eau à zéro degré.
+120,87,LAMANTINE,WATER,Otarie,Eau,Glace,166,Medium Fast,None,"1,7",120,Blanc,90,70,80,70,95,75,Son corps entier est d'une couleur blanc neige. Il peut nager au milieu des icebergs.
+13,88,TADMORV,MONSTER,Dégueu,Poison,None,65,Medium Fast,38,"0,9",30,Violet,80,80,50,25,40,190,Ce tas d'ordures concentrées sent très mauvais. Rien ne peut pousser dans son sillage putride.
+136,89,GROTADMORV,MONSTER,Dégueu,Poison,None,175,Medium Fast,None,"1,2",30,Violet,105,105,75,50,65,75,Son odeur immonde provoque des évanouissements. Son odorat s'est atrophié par sa propre puanteur.
+23,90,KOKIYAS,HELIX,Bivalve,Eau,None,61,Slow,None,"0,3",4,Violet,30,65,100,40,45,190,"Sa coquille le protège de toute attaque. Si elle s'ouvre, son corps fragile devient vulnérable."
+139,91,CRUSTABRI,HELIX,Bivalve,Eau,Glace,184,Slow,None,"1,5","132,5",Violet,50,95,180,70,85,60,Sa coquille plus dure que le diamant le protège. Il peut envoyer des volées de dards.
+25,92,FANTOMINUS,MONSTER,Gaz,Spectre,Poison,62,Medium Slow,25,"1,3","0,1",Violet,30,35,30,80,100,190,On en trouve dans les maisons en ruine. Il n'a pas de forme bien définie car il est fait de gaz.
+147,93,SPECTRUM,MONSTER,Gaz,Spectre,Poison,142,Medium Slow,None,"1,6","0,1",Violet,45,50,45,95,115,90,Les tremblements provoqués par le contact de sa langue éthérée ne s'arrêtent qu'à l'évanouissement.
+14,94,ECTOPLASMA,MONSTER,Ombre,Spectre,Poison,250,Medium Slow,None,"1,5","40,5",Violet,60,65,60,110,130,45,"Quand il lance une malééiction, il émet une aura malveillante qui provoque des frissons."
+34,95,ONIX,SNAKE,Serpenroc,Roche,Sol,77,Medium Fast,None,"8,8",210,Gris,35,45,160,70,30,45,Il creuse sous terre en quête de nourriture. Ses tunnels servent de maison aux Taupiqueur.
+48,96,SOPORIFIK,MONSTER,Hypnose,Psy,None,66,Medium Fast,26,1,"32,4",Jaune,60,48,45,42,90,190,"Si vous dormez près de lui, il influencera vos rêves avec les songes qu'il a dévoré."
+129,97,HYPNOMADE,MONSTER,Hypnose,Psy,None,169,Medium Fast,None,"1,6","75,6",Jaune,85,73,70,67,115,75,"Évitez son regard quand vous en croisez un, ou il essayera de vous hypnotiser avec son pendule."
+78,98,KRABBY,WATER,Doux Crabe,Eau,None,65,Medium Fast,28,"0,4","6,5",Rouge,30,105,90,50,25,225,"Ses pinces sont de puissantes armes. Si une se casse durant un combat, elle repoussera vite."
+138,99,KRABBOSS,WATER,Pince,Eau,None,166,Medium Fast,None,"1,3",60,Rouge,55,130,115,75,50,60,"Sa pince, grosse et dure comme de l'acier, peut déployer une pression de cent tonnes."
+6,100,VOLTORBE,BALL,Balle,Electrik,None,66,Medium Fast,30,"0,5","10,4",Rouge,40,30,50,100,55,190,On dit qu'il se déguise en Poké Ball. Il s'autodétruira à la moindre stimulation.
+141,101,ÉLECTRODE,BALL,Balle,Electrik,None,172,Medium Fast,None,"1,2","66,6",Rouge,60,50,70,140,80,60,"Il stocke de l'énergie électrique dans son corps, ce qui le rend instable et explosif."
+12,102,NŒUNŒUF,GRASS,Œuf,Plante,Psy,65,Slow,None,"0,4","2,5",Rose,60,40,80,40,60,90,Les têtes sont attirées les unes vers les autres. Il en faut six pour qu'il établisse son équilibre.
+10,103,NOADOKOKO,GRASS,Fruitpalme,Plante,Psy,186,Slow,None,2,120,Jaune,95,95,85,55,125,45,Son hurlement est strident car ses trois têtes se chamaillent tout le temps.
+17,104,OSSELAIT,MONSTER,Solitaire,Sol,None,64,Medium Fast,28,"0,4","6,5",Brun,50,50,95,35,40,190,Il porte le crâne de sa défunte mère. Ses pleurs résonnent dans son casque en une triste mélodie.
+145,105,OSSATUEUR,MONSTER,Gard'Os,Sol,None,149,Medium Fast,None,1,45,Brun,60,80,110,45,50,75,"Petit et faible, ce Pokémon est habile avec sa masse en os. Il devient vicieux avec l'âge."
+43,106,KICKLEE,MONSTER,Latteur,Combat,None,159,Medium Fast,None,"1,5","49,8",Brun,50,120,53,87,35,45,"Quand il donne des coups de pied, ceux-ci deviennent durs comme le diamant."
+44,107,TYGNON,MONSTER,Puncheur,Combat,None,159,Medium Fast,None,"1,4","50,2",Brun,50,105,79,76,35,45,Ses coups de poings rotatifs sont si puissants qu'il peut forer le béton comme un marteau-piqueur.
+11,108,EXCELANGUE,MONSTER,Lécheur,Normal,None,77,Medium Fast,None,"1,2","65,5",Rose,90,55,75,30,60,45,Sa langue mesure deux mètres et elle est plus maniable que ses pattes. Son contact provoque la paralysie.
+55,109,SMOGO,MONSTER,Gaz Mortel,Poison,None,68,Medium Fast,35,"0,6",1,Violet,40,65,95,35,60,190,"Dans des endroits chauds, son corps fait de gaz devient instable et peut exploser. Attention!"
+143,110,SMOGOGO,MONSTER,Gaz Mortel,Poison,None,172,Medium Fast,None,"1,2","9,5",Violet,65,90,120,60,85,60,"Ce Pokémon se nourrit de gaz, de poisons, et de germes que l'on peut trouver dans des tas d'ordures."
+18,111,RHINOCORNE,QUADRUPED,Piquant,Sol,Roche,69,Slow,42,1,115,Gris,80,85,95,25,30,120,"Un Pokémon qui a des œillères. S'il se met à charger, il ne s'arrêtera qu'à l'êpuisement."
+1,112,RHINOFÉROS,MONSTER,Perceur,Sol,Roche,170,Slow,None,"1,9",120,Gris,105,130,120,40,45,60,Il peut se tenir debout. Il semble un peu intelligent. Son épiderme résiste même à la lave.
+40,113,LEVEINARD,FAIRY,Œuf,Normal,None,395,Fast,None,"1,1","34,6",Rose,250,5,5,50,105,30,"Il est gentil et aimable, et il partage ses œufs nourrissants avec les Pokémon blessés."
+30,114,SAQUEDENEU,GRASS,Vigne,Plante,None,87,Medium Fast,None,1,35,Bleu,65,55,115,60,100,45,Son corps est masqué par une masse épaisse de lianes bleues qui poussent en permanence.
+2,115,KANGOUREX,MONSTER,Maternel,Normal,None,172,Medium Fast,None,"2,2",80,Brun,105,95,80,90,40,45,Il élève son petit dans sa poche ventrale. Il ne l'abandonne jamais dans un combat.
+92,116,HYPOTREMPE,WATER,Dragon,Eau,None,59,Medium Fast,32,"0,4",8,Bleu,30,40,70,60,70,225,"Menacé, il crache un jet d'encre ou d'eau de sa bouche pour se défendre."
+93,117,HYPOCÉAN,WATER,Dragon,Eau,None,154,Medium Fast,None,"1,2",25,Bleu,55,65,95,85,95,75,Le contact de sa nageoire provoque une irritation. Il ancre sa queue au corail pour dormir.
+157,118,POISSIRÈNE,WATER,Poisson,Eau,None,64,Medium Fast,33,"0,6",15,Rouge,45,67,60,63,50,225,"Quand survient la saison de ponte, on peut en voir dans les rivières et les cascades en larges groupes."
+158,119,POISSOROY,WATER,Poisson,Eau,None,158,Medium Fast,None,"1,3",39,Rouge,80,92,65,68,80,60,Le mâle utilise la corne placée sur son front pour creuser un nid dans la rivière.
+27,120,STARI,HELIX,Étoile,Eau,None,68,Slow,None,"0,8","34,5",Brun,30,45,55,85,70,225,"Tant que sa partie centrale est indemne, il peut régénérer les parties de son corps."
+152,121,STAROSS,HELIX,Mystérieux,Eau,Psy,182,Slow,None,"1,1",80,Violet,60,75,85,115,100,60,"Quand le centre de son corps, appelé le cœur, brille de sept couleurs, il essaie de parler."
+42,122,M.MIME,MONSTER,Bloqueur,Psy,None,161,Medium Fast,None,"1,3","54,5",Rose,40,45,65,90,100,45,Il est toujours en train de mimer. Il leurre ses ennemis en mimant des actions irréelles.
+26,123,INSÉCATEUR,BUG,Mante,Insecte,Vol,100,Medium Fast,None,"1,5",56,Vert,70,110,80,105,55,45,"Bondissant hors de l'herbe comme un ninja, il lacère sa proie de ses griffes acérées."
+72,124,LIPPOUTOU,MONSTER,Humanoïde,Glace,Psy,159,Medium Fast,None,"1,4","40,6",Rouge,65,50,35,95,95,45,Il bouge en rythme comme s'il dansait. Il ondule du popotin quand il marche.
+53,125,ÉLEKTEK,MONSTER,Électrique,Electrik,None,172,Medium Fast,None,"1,1",30,Jaune,65,83,57,105,85,45,Il provoque des pannes de courant dans les centrales en mangeant de l'électricité.
+51,126,MAGMAR,MONSTER,Crache-feu,Feu,None,173,Medium Fast,None,"1,3","44,5",Rouge,65,95,57,93,85,45,"Né dans un volcan en fusion, son corps est recouvert de flammes, comme une boule de feu."
+29,127,SCARABRUTE,BUG,Scarabée,Insecte,None,175,Slow,None,"1,5",55,Brun,65,125,100,85,55,45,Il enserre sa proie de sa puissante pince. Il ne peut se déplacer dans les milieux froids.
+60,128,TAUROS,QUADRUPED,Buffle,Normal,None,172,Slow,None,"1,4","88,4",Brun,75,100,95,110,70,45,C'est un Pokémon très endurant. Il n'achève sa charge qu'une fois sa cible pulvérisée.
+133,129,MAGICARPE,WATER,Poisson,Eau,None,40,Slow,20,"0,9",10,Rouge,20,10,55,80,20,255,"Célèbre pour son inutilité, on en trouve beaucoup dans les océans, les étangs et les riviéres."
+22,130,LÉVIATOR,SNAKE,Terrifiant,Eau,Vol,189,Slow,None,"6,5",235,Bleu,95,125,79,81,100,45,"Brutal, vicieux et dangereux, il est connu pour avoir rasé des villes entières par le passé."
+19,131,LOKHLASS,WATER,Transport,Eau,Glace,187,Slow,None,"2,5",220,Bleu,130,85,80,60,95,45,"D'une âme noble, il peut lire dans les esprits. Il transporte les humains sur son dos."
+76,132,MÉTHAMORPH,MONSTER,Morphing,Normal,None,101,Medium Fast,None,"0,3",4,Violet,48,48,48,48,48,35,"Quand il repère un ennemi, il adapte sa forme pour en faire une copie parfaite."
+102,133,ÉVOLI,QUADRUPED,Évolutif,Normal,None,65,Medium Fast,None,"0,3","6,5",Brun,55,55,50,55,65,45,Sa génétique instable lui permet d'évoluer de plusieurs façons. Très peu sont en vie.
+105,134,AQUALI,QUADRUPED,Bulleur,Eau,None,184,Medium Fast,None,1,29,Bleu,130,65,60,65,110,45,Sa structure cellulaire est semblable à celle de l'eau. Il est invisible en milieu aquatique.
+104,135,VOLTALI,QUADRUPED,Orage,Electrik,None,184,Medium Fast,None,"0,8","24,5",Jaune,65,65,60,130,110,45,Un Pokémon très sensible et lunatique. Il se charge en énergie selon son humeur.
+103,136,PYROLI,QUADRUPED,Flamme,Feu,None,184,Medium Fast,None,"0,9",25,Rouge,65,130,60,65,110,45,Une flamme brûle en permanence dans son corps. Il crache un feu de plus de mille degrés.
+170,137,PORYGON,MONSTER,Virtuel,Normal,None,79,Medium Fast,None,"0,8","36,5",Rose,65,60,70,40,75,45,"Conçu pour voler dans l'espace, on ne lui a toujours pas trouvé d'autre utilité."
+98,138,AMONITA,HELIX,Spirale,Roche,Eau,71,Medium Fast,40,"0,4","7,5",Bleu,35,40,100,35,90,45,Un ancien Pokémon régénéré à partir d'un fossile. Il nage grâce à ses dix tentacules.
+99,139,AMONISTAR,HELIX,Spirale,Roche,Eau,173,Medium Fast,None,1,35,Bleu,70,60,125,55,115,45,Il parait qu'il cassait des Kokiyas avec ses crocs acérés pour en absorber l'intérieur.
+90,140,KABUTO,HELIX,Carapace,Roche,Eau,71,Medium Fast,40,"0,5","11,5",Brun,30,80,90,55,45,45,"Créé à partir d'un fossile, il se sert des yeux dans son dos quand il se cache au fond de l'eau."
+91,141,KABUTOPS,HELIX,Carapace,Roche,Eau,173,Medium Fast,None,"1,3","40,5",Brun,60,115,105,80,70,45,C'est un très bon nageur. Il lacère sa proie de ses longues griffes et en absorbe les fluides corporels.
+171,142,PTÉRA,BIRD,Fossile,Roche,Vol,180,Slow,None,"1,8",59,Violet,80,105,65,130,60,45,Un Pokémon sauvage disparu il y a longtemps. Il est créé à partir d'ADN fossilisé dans l'ambre.
+132,143,RONFLEX,MONSTER,Pionceur,Normal,None,189,Slow,None,"2,1",460,Noir,160,110,65,30,65,25,"Il peut tout manger, même de la nourriture avariée. Il n'a jamais mal au ventre."
+74,144,ARTIKODIN,BIRD,Glacière,Glace,Vol,290,Slow,None,"1,7","55,4",Bleu,90,85,100,85,125,3,Un Pokémon légendaire. Il glace la vapeur d'eau contenue dans l'air pour en faire de la neige.
+75,145,ÉLECTHOR,BIRD,Électrique,Electrik,Vol,290,Slow,None,"1,6","52,6",Jaune,90,90,85,100,125,3,"Ce Pokémon légendaire annonce les nuages noirs, les éclairs et les averses."
+73,146,SULFURA,BIRD,Flamme,Feu,Vol,290,Slow,None,2,60,Jaune,90,100,90,90,125,3,"Quand ce Pokémon légendaire agite ses ailes, même la nuit noire s'embrase et rougeoie."
+88,147,MINIDRACO,SNAKE,Dragon,Dragon,None,60,Slow,30,"1,8","3,3",Bleu,41,64,45,50,50,45,L'existence de ce Pokémon ne fût confirmée que très récemment par un pêcheur.
+89,148,DRACO,SNAKE,Dragon,Dragon,None,147,Slow,55,4,"16,5",Bleu,61,84,65,70,70,45,"Selon certains, son corps est baigné d'une étrange aura, lui donnant un air mystique."
+66,149,DRACOLOSSE,SNAKE,Dragon,Dragon,Vol,300,Slow,None,"2,2",210,Brun,91,134,95,80,100,45,On raconte que ce Pokémon vit dans la mer et qu'il peut voler. Rien n'est moins sûr.
+131,150,MEWTWO,MONSTER,Génétique,Psy,None,340,Slow,None,2,122,Violet,106,110,90,130,154,3,"Son ADN est le même que celui de Mew, mais sa taille et son aspect sont très différents."
+21,151,MEW,MONSTER,Nouveau,Psy,None,300,Medium Slow,None,"0,4",4,Rose,100,100,100,100,100,45,"Vu au microscope, le pelage de ce Pokémon est fin, soyeux et très délicat."
+31,152,MISSINGNO,TETRIS,Bug,Bird,None,300,Medium Slow,None,1,,Brun,1,1,1,1,1,3,None
+32,153,MISSINGNO,TETRIS,Bug,Bird,None,300,Medium Slow,None,1,,Brun,1,1,1,1,1,3,None
+50,154,MISSINGNO,TETRIS,Bug,Bird,None,300,Medium Slow,None,1,,Brun,1,1,1,1,1,3,None
+52,155,MISSINGNO,TETRIS,Bug,Bird,None,300,Medium Slow,None,1,,Brun,1,1,1,1,1,3,None
+56,156,MISSINGNO,TETRIS,Bug,Bird,None,300,Medium Slow,None,1,,Brun,1,1,1,1,1,3,None
+61,157,MISSINGNO,TETRIS,Bug,Bird,None,300,Medium Slow,None,1,,Brun,1,1,1,1,1,3,None
+62,158,MISSINGNO,TETRIS,Bug,Bird,None,300,Medium Slow,None,1,,Brun,1,1,1,1,1,3,None
+63,159,MISSINGNO,TETRIS,Bug,Bird,None,300,Medium Slow,None,1,,Brun,1,1,1,1,1,3,None
+67,160,MISSINGNO,TETRIS,Bug,Bird,None,300,Medium Slow,None,1,,Brun,1,1,1,1,1,3,None
+68,161,MISSINGNO,TETRIS,Bug,Bird,None,300,Medium Slow,None,1,,Brun,1,1,1,1,1,3,None
+69,162,MISSINGNO,TETRIS,Bug,Bird,None,300,Medium Slow,None,1,,Brun,1,1,1,1,1,3,None
+79,163,MISSINGNO,TETRIS,Bug,Bird,None,300,Medium Slow,None,1,,Brun,1,1,1,1,1,3,None
+80,164,MISSINGNO,TETRIS,Bug,Bird,None,300,Medium Slow,None,1,,Brun,1,1,1,1,1,3,None
+81,165,MISSINGNO,TETRIS,Bug,Bird,None,300,Medium Slow,None,1,,Brun,1,1,1,1,1,3,None
+86,166,MISSINGNO,TETRIS,Bug,Bird,None,300,Medium Slow,None,1,,Brun,1,1,1,1,1,3,None
+87,167,MISSINGNO,TETRIS,Bug,Bird,None,300,Medium Slow,None,1,,Brun,1,1,1,1,1,3,None
+94,168,MISSINGNO,TETRIS,Bug,Bird,None,300,Medium Slow,None,1,,Brun,1,1,1,1,1,3,None
+95,169,MISSINGNO,TETRIS,Bug,Bird,None,300,Medium Slow,None,1,,Brun,1,1,1,1,1,3,None
+115,170,MISSINGNO,TETRIS,Bug,Bird,None,300,Medium Slow,None,1,,Brun,1,1,1,1,1,3,None
+121,171,MISSINGNO,TETRIS,Bug,Bird,None,300,Medium Slow,None,1,,Brun,1,1,1,1,1,3,None
+122,172,MISSINGNO,TETRIS,Bug,Bird,None,300,Medium Slow,None,1,,Brun,1,1,1,1,1,3,None
+127,173,MISSINGNO,TETRIS,Bug,Bird,None,300,Medium Slow,None,1,,Brun,1,1,1,1,1,3,None
+134,174,MISSINGNO,TETRIS,Bug,Bird,None,300,Medium Slow,None,1,,Brun,1,1,1,1,1,3,None
+135,175,MISSINGNO,TETRIS,Bug,Bird,None,300,Medium Slow,None,1,,Brun,1,1,1,1,1,3,None
+137,176,MISSINGNO,TETRIS,Bug,Bird,None,300,Medium Slow,None,1,,Brun,1,1,1,1,1,3,None
+140,177,MISSINGNO,TETRIS,Bug,Bird,None,300,Medium Slow,None,1,,Brun,1,1,1,1,1,3,None
+146,178,MISSINGNO,TETRIS,Bug,Bird,None,300,Medium Slow,None,1,,Brun,1,1,1,1,1,3,None
+156,179,MISSINGNO,TETRIS,Bug,Bird,None,300,Medium Slow,None,1,,Brun,1,1,1,1,1,3,None
+159,180,MISSINGNO,TETRIS,Bug,Bird,None,300,Medium Slow,None,1,,Brun,1,1,1,1,1,3,None
+160,181,MISSINGNO,TETRIS,Bug,Bird,None,300,Medium Slow,None,1,,Brun,1,1,1,1,1,3,None
+161,182,MISSINGNO,TETRIS,Bug,Bird,None,300,Medium Slow,None,1,,Brun,1,1,1,1,1,3,None
+162,183,MISSINGNO,TETRIS,Bug,Bird,None,300,Medium Slow,None,1,,Brun,1,1,1,1,1,3,None
+172,184,MISSINGNO,TETRIS,Bug,Bird,None,300,Medium Slow,None,1,,Brun,1,1,1,1,1,3,None
+174,185,MISSINGNO,TETRIS,Bug,Bird,None,300,Medium Slow,None,1,,Brun,1,1,1,1,1,3,None
+175,186,MISSINGNO,TETRIS,Bug,Bird,None,300,Medium Slow,None,1,,Brun,1,1,1,1,1,3,None
+181,187,MISSINGNO,TETRIS,Bug,Bird,None,300,Medium Slow,None,1,,Brun,1,1,1,1,1,3,None
+182,188,MISSINGNO,TETRIS,Bug,Bird,None,300,Medium Slow,None,1,,Brun,1,1,1,1,1,3,None
+183,189,MISSINGNO,TETRIS,Bug,Bird,None,300,Medium Slow,None,1,,Brun,1,1,1,1,1,3,None
+184,190,MISSINGNO,TETRIS,Bug,Bird,None,300,Medium Slow,None,1,,Brun,1,1,1,1,1,3,None
