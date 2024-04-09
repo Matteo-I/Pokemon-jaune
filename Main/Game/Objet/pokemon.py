@@ -11,7 +11,7 @@ class Pokemon:
     """
     La classe d'un pokemon
     """
-    def __init__(self,data,lvl = 2):
+    def __init__(self,data,lvl):
         self._id = ''
         self._pkd_id = ''
         self._name = ''
@@ -33,11 +33,11 @@ class Pokemon:
         self._description = ''
         self._surname = ''
         self._attaques = []
-        self._xp = get_xp(lvl,xp_type)
-        self._lvl = get_level(self._xp,xp_type)
-        self._iv = gen_iv()
-        self._ev = gen_ev()
-        self._stats = []
+        self._xp = None
+        self._lvl = lvl
+        self._iv = None
+        self._ev = None
+        self._stats = None
         self._statut = None
         self._do = ""
         self._healthPoints = None
@@ -64,6 +64,9 @@ class Pokemon:
         else:
             return self._type[0]
 
+    def get_base_xp(self):
+        return self._base_xp
+    
     def get_type_xp(self):
         return self._type_xp
     
@@ -89,27 +92,48 @@ class Pokemon:
     
     def get_color(self):
         return self._color
+    
+    def get_base_pv(self):
+        return self._base_pv
+    
+    def get_base_for(self):
+        return self._base_for
+    
+    def get_base_def(self):
+        return self._base_def
+    
+    def get_base_vit(self):
+        return self._base_vit
+    
+    def get_base_spe(self):
+        return self._base_spe
+    
+    def get_capture_rate(self):
+        return self._capture_rate
 
+    def get_description(self):
+        return self._description
 
-    def set_surname(self,new_name):
+    def set_surname(self,new_surname):
         """
         change le nom du pokemon.
         """
-        self._surname = new_name
+        self._surname = new_surname
 
-    def get_name(self):
+    def get_surname(self):
         """
-        Retourne le nom du pokemon.
+        Retourne le surnom du pokemon.
         """
-        return self._name
+        return self._surname
     
     def get_health_points(self):
         return self._healthPoints
 
-    def get_level(self,xp):
+    def get_level_from_xp(self):
         '''
         return le niveau du pokemon en fonction de son xp actuelle et de sa courbe d'xp
         '''
+        xp = self.get_xp()
         i,lvl = 0,1
         xp_type = self.get_nb_type_xp()
         if xp_type==1:
@@ -136,32 +160,50 @@ class Pokemon:
                 lvl+=1
                 i=1.25*(lvl**3)
             return lvl-1
+    
+    def get_lvl(self):
+        if self._xp == None and self._lvl == None:
+            self._lvl = 1
+        elif self._xp != None and self._lvl == None :
+            self._xp = self.get_level_from_x(self._xp)
+        return self._xp()
         
-    def get_xp(self,lvl,xp_type):
+    def get_xp_from_lvl(self):
         '''
         return l'xp du pokemon en fonction d'un niveau donné et de sa courbe d'xp
         Cette methode sert uniquement a la generation d'un pokemon avec un niveau defini
         '''
+        xp_type = self.get_nb_type_xp()
+        lvl = self.get_level()
+        base_xp = self.get_base_xp()
         if xp_type==1:
             #Courbe rapide
-            result= (lvl**3)*0.8
+            result= base_xp+((lvl**3)*0.8)
         elif xp_type==2:
             #Courbe moyenne
-            result= lvl**3
+            result= base_xp+(lvl**3)
         elif xp_type==3:
             #Courbe parabolique
-            result= 1.2*(lvl**3)-15*(lvl**2)+100*lvl-140
+            result= base_xp(1.2*(lvl**3)-15*(lvl**2)+100*lvl-140)
         else:
             #Courbe lente
-            result= 1.25*(lvl**3)
+            result= base_xp(1.25*(lvl**3))
         return int(result)
     
-    def get_next_level(self,xp):
+    def get_xp(self):
+        if self._xp == None and self._lvl == None:
+            self._xp = self.get_base_xp()
+        elif self._xp == None and self._lvl != None :
+            self._xp = self.get_xp_from_lvl(self._lvl)
+        return self._xp()
+
+    def get_next_level(self):
         '''
         return l'xp necessaire pour monter au niveau suivant
         '''
+        xp = self.get_xp()
         xp_type = self.get_nb_type_xp()
-        return get_xp(get_level(xp,xp_type)+1,xp_type)-xp
+        return self.get_xp(self.get_level(xp,xp_type)+1,xp_type)-xp
 
     def gen_iv(self):
         '''
@@ -177,16 +219,36 @@ class Pokemon:
         pv=8*(ivs[0]%2)+4*(ivs[1]%2)+2*(ivs[2]%2)+1*(ivs[3]%2)
         return ivs.append(pv)
     
-    def gen_ev(self):
+    def get_ivs(self):
+        if self._iv == None:
+            self._iv = self.gen_iv()
+        return self._iv
+    
+    def gen_evs(self):
         return [0 for i in range(5)]
     
+    def get_evs(self):
+        if self._ev == None:
+            self._ev = self.gen_evs()
+        return self._ev
+
+    def get_bases_stats(self):
+        bases_stats=[]
+        force = self.get_base_for()
+        defence = self.get_base_def()
+        vitesse = self.get_base_vit()
+        special = self.get_base_spe()
+        pvs = self.get_base_pv()
+        bases_stats.append(force,defence,vitesse,special,pvs)
+        return bases_stats
+
     def gen_stats(self):
-        base_stat = get_base_stats()
+        bases_stats = self.get_bases_stats()
         stats=[]
-        lvl = self._lvl
-        for i in range(5):
+        lvl = self.get_level()
+        for i in range(1,5):
             iv = self._iv[i]
-            base_stat = base_stats[i]
+            base_stat = bases_stats[i]
             ev = self._ev[i]
             if i<4:
                 stat= (((iv+base_stat+((ev**0.5)/8))*lvl)/50)+5
@@ -195,5 +257,11 @@ class Pokemon:
                 pv = (((iv+base_stat+((ev**0.5)/8)+50)*lvl)/50)+10
                 stats.append(pv)
         return stats
+    
+    def get_stats(self):
+        if self._stats == None:
+            self._stats = self.gen_stats()
+        return self._stats
+
 
 
