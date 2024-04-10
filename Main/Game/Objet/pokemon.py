@@ -2,45 +2,66 @@ from random import randint
 import os
 import pandas as pd
 import requests
+#sqlalchemy import
+from typing import List
+from typing import Optional
+from sqlalchemy import ForeignKey
+from sqlalchemy import String
+from sqlalchemy.orm import DeclarativeBase
+from sqlalchemy.orm import Mapped
+from sqlalchemy.orm import mapped_column
+from sqlalchemy.orm import relationship
 
-local_file = "Main/Game/Data/Pokémons.csv"
+local_file = "Main/Game/Data/Pokemons.csv"
 pokemons = pd.read_csv(local_file, delimiter = ",")
 
+
+class Base(DeclarativeBase):
+    pass
 
 class Pokemon:
     """
     La classe d'un pokemon
     """
-    def __init__(self,data,lvl):
-        self._id = ''
-        self._pkd_id = ''
-        self._name = ''
-        self._shape = ''
-        self._class = ''
-        self._type = []
-        self._base_xp = ''
-        self._type_xp = ''
-        self.evolution_lvl = ''
-        self._height = ''
-        self._weight = ''
-        self._color = ''
-        self._base_pv = ''
-        self._base_for = ''
-        self._base_def = ''
-        self._base_vit = ''
-        self._base_spe = ''
-        self._capture_rate = ''
-        self._description = ''
-        self._surname = ''
-        self._attaques = []
-        self._xp = None
-        self._lvl = lvl
-        self._iv = None
-        self._ev = None
-        self._stats = None
-        self._statut = None
-        self._do = ""
-        self._healthPoints = None
+    #def __init__(self,name):
+     #    self.id = ''
+    #     self._pkd_id = ''
+    #     self.name = name
+    #     self._shape = ''
+    #     self._class = ''
+    #     self._type = []
+    #     self._base_xp = ''
+    #     self._type_xp = ''
+    #     self._evolution_lvl = ''
+    #     self._height = ''
+    #     self._weight = ''
+    #     self._color = ''
+    #     self._base_pv = ''
+    #     self._base_for = ''
+    #     self._base_def = ''
+    #     self._base_vit = ''
+    #     self._base_spe = ''
+    #     self._capture_rate = ''
+    #     self._description = ''
+    #     self._surname = ''
+    #     self._attaques = []
+    #     self._xp = None
+    #     self._lvl = lvl
+    #     self._iv = None
+    #     self._ev = None
+    #     self._stats = None
+    #     self._statut = None
+    #     self._do = None
+    #     self._healthPoints = None
+    
+    __tablename__ = "POKEMON"
+
+    id: Mapped[int] = mapped_column(primary_key=True)
+    name: Mapped[str] = mapped_column(String(30))
+    
+
+    def __repr__(self) -> str:
+         return f"Pokmeon(id={self.id!r}, name={self.name!r})"
 
     
     def get_id(self):
@@ -127,6 +148,10 @@ class Pokemon:
         return self._surname
     
     def get_health_points(self):
+        if self._healthPoints == None or self._healthPoints < 0 :
+            self._healthPoints = 0
+        elif self._healthPoints > self.get_base_pv() :
+            self._healthPoints = self.get_pv()
         return self._healthPoints
 
     def get_level_from_xp(self):
@@ -165,7 +190,7 @@ class Pokemon:
         if self._xp == None and self._lvl == None:
             self._lvl = 1
         elif self._xp != None and self._lvl == None :
-            self._xp = self.get_level_from_x(self._xp)
+            self._xp = self.get_level_from_xp(self.get_xp())
         return self._xp()
         
     def get_xp_from_lvl(self):
@@ -194,7 +219,7 @@ class Pokemon:
         if self._xp == None and self._lvl == None:
             self._xp = self.get_base_xp()
         elif self._xp == None and self._lvl != None :
-            self._xp = self.get_xp_from_lvl(self._lvl)
+            self._xp = self.get_xp_from_lvl(self.get_lvl())
         return self._xp()
 
     def get_next_level(self):
@@ -223,6 +248,26 @@ class Pokemon:
         if self._iv == None:
             self._iv = self.gen_iv()
         return self._iv
+
+    def get_iv_for(self):
+        iv = self.get_ivs()[0]
+        return iv
+    
+    def get_iv_def(self):
+        iv = self.get_ivs()[1]
+        return iv
+
+    def get_iv_vit(self):
+        iv = self.get_ivs()[2]
+        return iv
+    
+    def get_iv_spe(self):
+        iv = self.get_ivs()[3]
+        return iv
+
+    def get_iv_pv(self):
+        iv = self.get_ivs()[4]
+        return iv
     
     def gen_evs(self):
         return [0 for i in range(5)]
@@ -231,7 +276,73 @@ class Pokemon:
         if self._ev == None:
             self._ev = self.gen_evs()
         return self._ev
+    
+    def get_ev_for(self):
+        ev = self.get_evs()[0]
+        return ev
+    
+    def get_ev_def(self):
+        ev = self.get_evs()[1]
+        return ev
 
+    def get_ev_vit(self):
+        ev = self.get_evs()[2]
+        return ev
+    
+    def get_ev_spe(self):
+        ev = self.get_evs()[3]
+        return ev
+
+    def get_ev_pv(self):
+        ev = self.get_evs()[4]
+        return ev
+    
+    def add_ev_for(self,nb):
+        ev = self.get_ev_for()
+        if ev >= 65535:
+            ev = 65535
+            self._ev[0] = ev
+        elif ev <= 0:
+            ev = 0 + nb
+            self._ev[0] = ev
+    
+    def add_ev_def(self,nb):
+        ev = self.get_ev_def()
+        if ev >= 65535:
+            ev = 65535
+            self._ev[1] = ev
+        elif ev <= 0:
+            ev = 0 + nb
+            self._ev[1] = ev
+    
+    def add_ev_vit(self,nb):
+        ev = self.get_ev_vit()
+        if ev >= 65535:
+            ev = 65535
+            self._ev[2] = ev
+        elif ev <= 0:
+            ev = 0 + nb
+            self._ev[2] = ev
+        
+    
+    def add_ev_spe(self,nb):
+        ev = self.get_ev_spe()
+        if ev >= 65535:
+            ev = 65535
+            self._ev[3] = ev
+        elif ev <= 0:
+            ev = 0 + nb
+            self._ev[3] = ev
+
+    def add_ev_pv(self,nb):
+        ev = self.get_ev_pv()
+        if ev >= 65535:
+            ev = 65535
+            self._ev[4] = ev
+        elif ev <= 0:
+            ev = 0 + nb
+            self._ev[4] = ev
+    
     def get_bases_stats(self):
         bases_stats=[]
         force = self.get_base_for()
@@ -259,9 +370,36 @@ class Pokemon:
         return stats
     
     def get_stats(self):
-        if self._stats == None:
+        if self._stats == None or len(self._stats) < 5:
             self._stats = self.gen_stats()
         return self._stats
+    
+    def get_for(self):
+        force = self.get_stats()[0]
+        return force
+    
+    def get_def(self):
+        defence = self.get_stats()[1]
+        return defence
 
+    def get_vit(self):
+        vitesse = self.get_stats()[2]
+        return vitesse
+    
+    def get_spe(self):
+        special = self.get_stats()[3]
+        return special
 
+    def get_pv(self):
+        pv = self.get_stats()[4]
+        return pv
 
+    
+from sqlalchemy import create_engine
+from sqlalchemy.orm import Session
+engine = create_engine("sqlite://", echo=True)
+Base.metadata.create_all(engine)
+with Session(engine) as session:
+    Pikachu = Pokemon(name="PIKACHU")
+    session.add_all([Pikachu])
+    session.commit()

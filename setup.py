@@ -7,6 +7,9 @@ setup(
     author='Matteo Imbert',
 
     install_requires=[
+        "sqlalchemy",
+        "pandas",
+        "requests"
         ],
     zip_safe=False,
 )

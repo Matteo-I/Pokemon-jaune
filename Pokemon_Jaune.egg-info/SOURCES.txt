@@ -1,0 +1,8 @@
+README.md
+setup.py
+Pokemon_Jaune.egg-info/PKG-INFO
+Pokemon_Jaune.egg-info/SOURCES.txt
+Pokemon_Jaune.egg-info/dependency_links.txt
+Pokemon_Jaune.egg-info/not-zip-safe
+Pokemon_Jaune.egg-info/requires.txt
+Pokemon_Jaune.egg-info/top_level.txt
