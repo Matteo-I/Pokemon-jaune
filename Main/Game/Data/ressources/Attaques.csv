@@ -1,0 +1,166 @@
+ID_Attaque,ID_Objet,Nom,Type,Classe,Puissance,Precision,PP,Effet,Description
+1,,Écras'Face,NORMAL,Physique,40,100,35,NO_ADDITIONAL_EFFECT,Aucun
+2,,Poing-Karaté,NORMAL,Physique,50,100,25,NO_ADDITIONAL_EFFECT,Blesse le lanceur
+3,,Torgnoles,NORMAL,Physique,15,85,10,TWO_TO_FIVE_ATTACKS_EFFECT,Attaque deux à cinq fois
+4,,Poing Comète,NORMAL,Physique,18,85,15,TWO_TO_FIVE_ATTACKS_EFFECT,Attaque deux à cinq fois
+5,,Ultimapoing,NORMAL,Physique,80,85,20,NO_ADDITIONAL_EFFECT,Aucun
+6,,Jackpot,NORMAL,Physique,40,100,20,PAY_DAY_EFFECT,Aucun
+7,,Poing de Feu,FEU,Spéciale,75,100,15,BURN_SIDE_EFFECT1,Peut brûler la cible
+8,,Poinglace,GLACE,Spéciale,75,100,15,FREEZE_SIDE_EFFECT,Peut geler la cible
+9,,Poing-Éclair,ELECTRIQUE,Spéciale,75,100,15,PARALYZE_SIDE_EFFECT1,Peut paralyser la cible
+10,,Griffe,NORMAL,Physique,40,100,35,NO_ADDITIONAL_EFFECT,Aucun
+11,,Force Poigne,NORMAL,Physique,55,100,30,NO_ADDITIONAL_EFFECT,Aucun
+12,,Guillotine,NORMAL,Physique,1,30,5,OHKO_EFFECT,Inflige toujours 20 PV de dégâts
+13,,Coupe-Vent,NORMAL,Physique,80,75,10,CHARGE_EFFECT,"Attaque en deux tours, n'agit pas au premier"
+14,,Danse-Lames,NORMAL,-,-,-,30,"SWORDS_DANCE, ATTACK_UP2_EFFECT",Augmente l'attaque du lanceur de deux niveaux
+15,,Coupe,NORMAL,Physique,50,95,30,NO_ADDITIONAL_EFFECT,Aucun
+16,,Tornade,NORMAL,Physique,40,100,35,NO_ADDITIONAL_EFFECT,Fait gagner un peu d'argent à la fin des combats
+17,,Cru-Aile,VOL,Physique,35,100,35,NO_ADDITIONAL_EFFECT,Aucun
+18,,Cyclone,NORMAL,-,-,85,20,SWITCH_AND_TELEPORT_EFFECT,"Met fin au combat contre un Pokémon sauvage, échoue contre un dresseur"
+19,,Vol,VOL,Physique,70,95,15,FLY_EFFECT,"Attaque en deux tours, le lanceur ne peut être atteint que par Météores et Patience au premier tour"
+20,,Étreinte,NORMAL,Physique,15,75,20,TRAPPING_EFFECT,Attaque continue sur deux à cinq tours
+21,,Souplesse,NORMAL,Physique,80,75,20,NO_ADDITIONAL_EFFECT,Aucun
+22,,Fouet Lianes,PLANTE,Spéciale,35,100,10,NO_ADDITIONAL_EFFECT,Aucun
+23,,Écrasement,NORMAL,Physique,65,100,20,FLINCH_SIDE_EFFECT2,Peut apeurer la cible
+24,,Double Pied,COMBAT,Physique,30,100,30,ATTACK_TWICE_EFFECT,Frappe deux fois
+25,,Ultimawashi,NORMAL,Physique,120,75,5,NO_ADDITIONAL_EFFECT,Aucun
+26,,Pied Sauté,COMBAT,Physique,70,95,25,JUMP_KICK_EFFECT,Enlève 1 PV si l'attaque échoue
+27,,Mawashi Geri,COMBAT,Physique,60,85,15,FLINCH_SIDE_EFFECT2,Peut apeurer la cible
+28,,Jet de Sable,NORMAL,-,-,100,15,ACCURACY_DOWN1_EFFECT,Baisse la précision de la cible
+29,,Coup d'Boule,NORMAL,Physique,70,100,15,FLINCH_SIDE_EFFECT2,Peut apeurer la cible
+30,,Koud'Korne,NORMAL,Physique,65,100,25,NO_ADDITIONAL_EFFECT,Aucun
+31,,Furie,NORMAL,Physique,15,85,20,TWO_TO_FIVE_ATTACKS_EFFECT,Attaque deux à cinq fois
+32,,Empal'Korne,NORMAL,Physique,1,30,5,OHKO_EFFECT,"Immobilise le lanceur deux ou trois tours, puis inflige à l'adversaire le double des dégâts subis pendant cette période"
+33,,Charge,NORMAL,Physique,35,95,35,NO_ADDITIONAL_EFFECT,Aucun
+34,,Plaquage,NORMAL,Physique,85,100,15,PARALYZE_SIDE_EFFECT2,Peut paralyser la cible
+35,,Ligotage,NORMAL,Physique,15,85,20,TRAPPING_EFFECT,Attaque continue sur deux à cinq tours
+36,,Bélier,NORMAL,Physique,90,85,20,RECOIL_EFFECT,Blesse le lanceur
+37,,Mania,NORMAL,Physique,90,100,20,THRASH_PETAL_DANCE_EFFECT,"Attaque continue sur deux ou trois tours, le lanceur devient confus par la suite"
+38,,Damoclès,NORMAL,Physique,100,100,15,RECOIL_EFFECT,Blesse le lanceur
+39,,Mimi-Queue,NORMAL,-,-,100,30,DEFENSE_DOWN1_EFFECT,Baisse la défense de la cible
+40,,Dard-Venin,POISON,Physique,15,100,35,POISON_SIDE_EFFECT1,Peut empoisonner la cible
+41,,Double Dard,INSECTE,Physique,25,100,20,TWINEEDLE_EFFECT,Attaque deux fois - Peut empoisoner
+42,,Dard-Nuée,INSECTE,Physique,14,85,20,TWO_TO_FIVE_ATTACKS_EFFECT,Attaque deux à cinq fois
+43,,Groz'Yeux,NORMAL,-,-,100,30,DEFENSE_DOWN1_EFFECT,Baisse la défense de la cible
+44,,Morsure,NORMAL,Physique,60,100,25,FLINCH_SIDE_EFFECT1,Peut apeurer la cible
+45,,Rugissement,NORMAL,-,-,100,40, ATTACK_DOWN1_EFFECT,Baisse l'attaque de la cible
+46,,Hurlement,NORMAL,-,-,100,20,SWITCH_AND_TELEPORT_EFFECT,"Met fin au combat contre un Pokémon sauvage, échoue contre un dresseur"
+47,,Berceuse,NORMAL,-,-,55,15,SLEEP_EFFECT,Endort la cible
+48,,Ultrason,NORMAL,-,-,55,20,CONFUSION_EFFECT,Rend la cible confuse
+49,,Sonicboom,NORMAL,Physique,1,90,20,SPECIAL_DAMAGE_EFFECT,"Met l'adversaire KO, échoue s'il a une vitesse supérieure à celle du lanceur"
+50,,Entrave,NORMAL,-,-,55,20,DISABLE_EFFECT,Supprime durant un à huit tour une attaque au hasard de la cible
+51,,Acide,POISON,Physique,40,100,30,DEFENSE_DOWN_SIDE_EFFECT,Peut baisser la défense de la cible
+52,,Flammèche,FEU,Spéciale,40,100,25,BURN_SIDE_EFFECT1,Peut brûler la cible
+53,,Lance-Flamme,FEU,Spéciale,95,100,15,BURN_SIDE_EFFECT1,Peut brûler la cible
+54,,Brume,GLACE,-,-,-,30,MIST_EFFECT,Empêche toute variation de stat provoquée par l'adversaire
+55,,Pistolet à O,EAU,Spéciale,40,100,25,NO_ADDITIONAL_EFFECT,Aucun
+56,,Hydrocanon,EAU,Spéciale,120,80,5,NO_ADDITIONAL_EFFECT,Aucun
+57,,Surf,EAU,Spéciale,95,100,15,NO_ADDITIONAL_EFFECT,Aucun
+58,,Laser Glace,GLACE,Spéciale,95,100,10,FREEZE_SIDE_EFFECT,Peut geler la cible
+59,,Blizzard,GLACE,Spéciale,120,90,5,FREEZE_SIDE_EFFECT,Peut geler la cible
+60,,Rafale Psy,PSY,Spéciale,65,100,20,CONFUSION_SIDE_EFFECT,Peut rendre la cible confuse
+61,,Bulles d'O,EAU,Spéciale,65,100,20,SPEED_DOWN_SIDE_EFFECT,Peut baisser la vitesse de la cible
+62,,Onde Boréale,GLACE,Spéciale,65,100,20,ATTACK_DOWN_SIDE_EFFECT,Peut baisser l'attaque la cible
+63,,Ultralaser,NORMAL,Physique,150,90,5,HYPER_BEAM_EFFECT,Lanceur immobilisé au tour suivant
+64,,Picpic,VOL,Physique,35,100,35,NO_ADDITIONAL_EFFECT,Aucun
+65,,Bec Vrille,VOL,Physique,80,100,20,NO_ADDITIONAL_EFFECT,Aucun
+66,,Sacrifice,COMBAT,Physique,80,80,25,RECOIL_EFFECT,Blesse le lanceur
+67,,Balayage,COMBAT,Physique,50,90,20,FLINCH_SIDE_EFFECT2,Peut apeurer la cible - Taux de Coups Critiques élevé
+68,,Riposte,COMBAT,Physique,1,100,20,NO_ADDITIONAL_EFFECT,Inflige des dégâts égaux au niveau du lanceur
+69,,Frappe Atlas,COMBAT,Physique,1,100,20,SPECIAL_DAMAGE_EFFECT,"Inflige le double des dégâts subis par une attaque de type Normal ou Combat durant le tour, échoue sinon"
+70,,Force,NORMAL,Physique,80,100,15,NO_ADDITIONAL_EFFECT,Aucun
+71,,Vol-Vie,PLANTE,Spéciale,20,100,20,DRAIN_HP_EFFECT,Restaure un nombre de PV au lanceur égal à la moitié des dégâts infligés à la cible
+72,,Méga-Sangsue,PLANTE,Spéciale,40,100,10,DRAIN_HP_EFFECT,Restaure un nombre de PV au lanceur égal à la moitié des dégâts infligés à la cible
+73,,Vampigraine,PLANTE,-,-,90,10,LEECH_SEED_EFFECT,Draîne à chaque tour des PV de la cible vers le lanceur
+74,,Croissance,NORMAL,-,-,-,40,SPECIAL_UP1_EFFECT,Augmente le spécial du lanceur
+75,,Tranch'Herbe,PLANTE,Spéciale,55,95,25,NO_ADDITIONAL_EFFECT,Taux de Coups Critiques élevé
+76,,Lance-Soleil,PLANTE,Spéciale,120,100,10,CHARGE_EFFECT,"Attaque en deux tours, n'agit pas au premier"
+77,,Poudre Toxik,POISON,-,-,75,35,POISON_EFFECT,Empoisonne la cible
+78,,Para-Spore,PLANTE,-,-,75,30,PARALYZE_EFFECT,Paralyse la cible
+79,,Poudre Dodo,PLANTE,-,-,75,15,SLEEP_EFFECT,Endort la cible
+80,,Danse-Fleur,PLANTE,Spéciale,70,100,20,THRASH_PETAL_DANCE_EFFECT,"Attaque continue sur deux ou trois tour, le lanceur devient confus par la suite"
+81,,Sécrétion,INSECTE,-,-,95,40,SPEED_DOWN1_EFFECT,Diminue la vitesse de la cible
+82,,Draco-Rage,DRAGON,Spéciale,1,100,10,SPECIAL_DAMAGE_EFFECT,Inflige toujours 40 PV de dégâts
+83,,Danseflamme,FEU,Spéciale,15,70,15,TRAPPING_EFFECT,Attaque continue sur deux à cinq tours
+84,,Éclair,ELECTRIQUE,Spéciale,40,100,30,PARALYZE_SIDE_EFFECT1,Peut paralyser la cible
+85,,Tonnerre,ELECTRIQUE,Spéciale,95,100,15,mPARALYZE_SIDE_EFFECT1,Peut paralyser la cible
+86,,Cage-Éclair,ELECTRIQUE,-,-,100,20,PARALYZE_EFFECT,Paralyse la cible
+87,,Fatal-Foudre,ELECTRIQUE,Spéciale,120,70,10,PARALYZE_SIDE_EFFECT1,Peut paralyser la cible
+88,,Jet-Pierres,ROCHE,Physique,50,65,15,NO_ADDITIONAL_EFFECT,Aucun
+89,,Séisme,SOL,Physique,100,100,10,NO_ADDITIONAL_EFFECT,Aucun
+90,,Abîme,SOL,Physique,1,30,5,OHKO_EFFECT,"Met l'adversaire KO, échoue s'il a une vitesse supérieure à celle du lanceur"
+91,,Tunnel,SOL,Physique,100,100,10,CHARGE_EFFECT,"Attaque en deux tours, le lanceur ne peut être atteint que par Météores et Patience au premier tour"
+92,,Toxik,POISON,-,-,85,10,POISON_EFFECT,Empoisonne gravement la cible
+93,,Choc Mental,PSY,Spéciale,50,100,25,CONFUSION_SIDE_EFFECT,Peut rendre la cible confuse
+94,,Psyko,PSY,Spéciale,90,100,10,SPECIAL_DOWN_SIDE_EFFECT,Peut baisser le spécial de la cible
+95,,Hypnose,PSY,-,-,60,20,SLEEP_EFFECT,Endort la cible
+96,,Yoga,PSY,-,-,-,40,ATTACK_UP1_EFFECT,Augmente l'attaque du lanceur
+97,,Hâte,PSY,-,-,-,30,SPEED_UP2_EFFECT,Augmente la vitesse du lanceur de deux niveaux
+98,,Vive-Attaque,NORMAL,Physique,40,100,30,NO_ADDITIONAL_EFFECT,Attaque en premier
+99,,Frénésie,NORMAL,Physique,20,100,20,RAGE_EFFECT,"Attaque sans fin, provoque l'augmentation de l'attaque du lanceur à chaque fois qu'il subit des dégâts"
+100,,Téléport,PSY,-,-,-,20,SWITCH_AND_TELEPORT_EFFECT,"Met fin au combat contre un Pokémon sauvage, échoue contre un dresseur"
+101,,Ténèbres,SPECTRE,Physique,1,100,15,SPECIAL_DAMAGE_EFFECT,Inflige des dégâts égaux au niveau du lanceur
+102,,Copie,NORMAL,-,-,100,10,MIMIC_EFFECT,Apprend une des attaques de l'advresaire au hasard jusqu'à la fin du combat
+103,,Grincement,NORMAL,-,-,85,40,DEFENSE_DOWN2_EFFECT,Baisse la défense de l'adversaire de deux niveaux
+104,,Reflet,NORMAL,-,-,-,15,EVASION_UP1_EFFECT,Augmente l'esquive du lanceur
+105,,Soin,NORMAL,-,-,-,20,HEAL_EFFECT,Restaure jusqu'à la moitié des PV du lanceur
+106,,Armure,NORMAL,-,-,-,30,DEFENSE_UP1_EFFECT,Augmente la défense du lanceur
+107,,Lilliput,NORMAL,-,-,-,20,EVASION_UP1_EFFECT,Augmente l'esquive du lanceur
+108,,Brouillard,NORMAL,-,-,100,20,ACCURACY_DOWN1_EFFECT,Baisse la précision de la cible
+109,,Onde Folie,SPECTRE,-,-,100,10,CONFUSION_EFFECT,Rend la cible confuse
+110,,Repli,EAU,-,-,-,40,DEFENSE_UP1_EFFECT,Augmente la défense du lanceur
+111,,Boul'Armure,NORMAL,-,-,-,40,DEFENSE_UP1_EFFECT,Augmente la défense du lanceur
+112,,Bouclier,PSY,-,-,-,30,DEFENSE_UP2_EFFECT,Augmente la défense du lanceur de deux niveaux
+113,,Mur Lumière,PSY,-,-,-,30,LIGHT_SCREEN_EFFECT,Augmente la résistance du lanceur aux attaques spéciales
+114,,Buée Noire,GLACE,-,-,-,30,HAZE_EFFECT,"Annule toute variation de stat, la confusion, les effets de Puissance, Vampigraine, Mur Lumière et Protection"
+115,,Protection,PSY,-,-,-,20,REFLECT_EFFECT,Augmente la résistance du lanceur aux attaques physiques
+116,,Puissance,NORMAL,-,-,-,30,FOCUS_ENERGY_EFFECT,Augmente le taux de Coups Critiques du lanceur
+117,,Patience,NORMAL,Physique,1,-,10,BIDE_EFFECT,"Met l'adversaire KO, échoue s'il a une vitesse supérieure à celle du lanceur"
+118,,Métronome,NORMAL,-,-,-,10,METRONOME_EFFECT,Exécute une attaque prise au hasard dans cette liste
+119,,Mimique,VOL,-,-,-,20,MIRROR_MOVE_EFFECT,Le lanceur utilise la dernière attaque lancée par l'adversaire
+120,,Destruction,NORMAL,Physique,130,100,5,EXPLODE_EFFECT,"Lanceur KO après l'attaque, ne tient compte que de la moitié de la défense adverse, ce qui équivaut à une puissance réelle de 260"
+121,,Bomb'Oeuf,NORMAL,Physique,100,75,10,NO_ADDITIONAL_EFFECT,Aucun
+122,,Léchouille,SPECTRE,Physique,20,100,30,PARALYZE_SIDE_EFFECT2,Peut paralyser la cible
+123,,Purédpois,POISON,Physique,20,70,20,POISON_SIDE_EFFECT2,Peut empoisonner la cible
+124,,Détritus,POISON,Physique,65,100,20,POISON_SIDE_EFFECT2,Peut empoisonner la cible
+125,,Massd'Os,SOL,Physique,65,85,20,FLINCH_SIDE_EFFECT1,Peut apeurer la cible
+126,,Déflagration,FEU,Spéciale,120,85,5,BURN_SIDE_EFFECT2,Peut brûler la cible
+127,,Cascade,EAU,Spéciale,80,100,15,NO_ADDITIONAL_EFFECT,Aucun
+128,,Claquoir,EAU,Spéciale,35,75,10,TRAPPING_EFFECT,Attaque continue sur deux à cinq tours
+129,,Météores,NORMAL,Physique,60,-,20,SWIFT_EFFECT,N'échoue jamais
+130,,Coud'Krâne,NORMAL,Physique,100,100,15,CHARGE_EFFECT,"Attaque en deux tours, n'agit pas au premier"
+131,,Picanon,NORMAL,Physique,20,100,15,TWO_TO_FIVE_ATTACKS_EFFECT,Attaque deux à cinq fois
+132,,Constriction,NORMAL,Physique,10,100,35,SPEED_DOWN_SIDE_EFFECT,Peut baisser la vitesse de la cible
+133,,Amnésie,PSY,-,-,-,20,SPECIAL_UP2_EFFECT,Augmente le spécial du lanceur de deux niveaux
+134,,Télékinésie,PSY,-,-,80,15,ACCURACY_DOWN1_EFFECT,Baisse la précision de la cible
+135,,E-Coque,NORMAL,-,-,-,10,HEAL_EFFECT,Restaure jusqu'à la moitié des PV du lanceur
+136,,Pied Voltige,COMBAT,Physique,85,90,20,JUMP_KICK_EFFECT,Enlève 1 PV si l'attaque échoue
+137,,Intimidation,NORMAL,-,-,75,30,PARALYZE_EFFECT,Paralyse la cible
+138,,Dévorêve,PSY,Spéciale,100,100,15,DREAM_EATER_EFFECT,"Restaure un nombre de PV au lanceur égal à la moitié des dégâts infligés à la cible, ne fonctionne que si la cible est endormie"
+139,,Gaz Toxik,POISON,-,-,55,40,POISON_EFFECT,Empoisonne la cible
+140,,Pilonnage,NORMAL,Physique,15,85,20,TWO_TO_FIVE_ATTACKS_EFFECT,Attaque deux à cinq fois
+141,,Vampirisme,INSECTE,Physique,20,100,15,DRAIN_HP_EFFECT,Restaure un nombre de PV au lanceur égal à la moitié des dégâts infligés à la cible
+142,,Grobisou,NORMAL,-,-,75,10,SLEEP_EFFECT,Endort la cible
+143,,Piqué,VOL,Physique,120,90,5,CHARGE_EFFECT,"Attaque en deux tours, n'agit pas au premier"
+144,,Morphing,NORMAL,-,-,-,10,TRANSFORM_EFFECT,Transforme le lanceur en le Pokémon adverse
+145,,Écume,EAU,Spéciale,20,100,30,SPEED_DOWN_SIDE_EFFECT,Peut baisser la vitesse de la cible
+146,,Uppercut,NORMAL,Physique,70,100,10,NO_ADDITIONAL_EFFECT,Aucun
+147,,Spore,PLANTE,-,-,100,15,SLEEP_EFFECT,Endort la cible
+148,,Flash,NORMAL,-,-,70,20,ACCURACY_DOWN1_EFFECT,Baisse la précision de la cible
+149,,Vague Psy,PSY,Spéciale,1,80,15,SPECIAL_DAMAGE_EFFECT,Inflige des dégâts variables
+150,,Trempette,NORMAL,-,-,-,40,SPLASH_EFFECT,Aucun
+151,,Acidarmure,POISON,-,-,-,40,DEFENSE_UP2_EFFECT,Augmente la défense du lanceur de deux niveaux
+152,,Pince-Masse,EAU,Spéciale,90,85,10,NO_ADDITIONAL_EFFECT,Taux de Coups Critiques élevé
+153,,Explosion,NORMAL,Physique,170,100,5,EXPLODE_EFFECT,"Lanceur KO après l'attaque, ne tient compte que de la moitié de la défense adverse, ce qui équivaut à une puissance réelle de 340"
+154,,Combo-Griffe,NORMAL,Physique,18,80,15,TWO_TO_FIVE_ATTACKS_EFFECT,Attaque deux à cinq fois
+155,,Osmerang,SOL,Physique,50,90,10,ATTACK_TWICE_EFFECT,Attaque deux fois
+156,,Repos,PSY,-,-,-,10,HEAL_EFFECT,"Restaure tous les PV du lanceur ainsi que son statut, le lanceur est immobilisé pendant deux tours"
+157,,Éboulement,ROCHE,Physique,75,90,10,NO_ADDITIONAL_EFFECT,Peut apeurer la cible
+158,,Croc de Mort,NORMAL,Physique,80,90,15,FLINCH_SIDE_EFFECT1,Peut apeurer la cible
+159,,Affûtage,NORMAL,-,-,-,30,ATTACK_UP1_EFFECT,Augmente l'attaque du lanceur
+160,,Adaptation,NORMAL,-,-,-,30,CONVERSION_EFFECT,Le lanceur devient du même type que l'adversaire
+161,,Triplattaque,NORMAL,Physique,80,100,10,NO_ADDITIONAL_EFFECT,Aucun
+162,,Croc Fatal,NORMAL,Physique,1,90,10,SUPER_FANG_EFFECT,Enlève 50% des PV restants de la cible
+163,,Tranche,NORMAL,Physique,70,100,20,NO_ADDITIONAL_EFFECT,Taux de Coups Critiques élevé
+164,,Clonage,NORMAL,-,-,-,10,SUBSTITUTE_EFFECT,"Crée un clone qui prend les dommages à la place du lanceur, enlève 25% des PV du lanceur"
+164,,Lutte,NORMAL,Physique,50,-,-,RECOIL_EFFECT,Taux de Coups Critiques élevé
