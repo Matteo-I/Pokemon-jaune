@@ -1,5 +1,10 @@
 README.md
 setup.py
+Main/main.py
+Main/Game/Objet/attaques.py
+Main/Game/Objet/dresseur.py
+Main/Game/Objet/pokemon.py
+Main/Test/test_lvl.py
 Pokemon_Jaune.egg-info/PKG-INFO
 Pokemon_Jaune.egg-info/SOURCES.txt
 Pokemon_Jaune.egg-info/dependency_links.txt

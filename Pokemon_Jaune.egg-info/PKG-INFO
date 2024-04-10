@@ -1,11 +1,8 @@
 Metadata-Version: 2.1
-Name: Pokemon-Jaune
+Name: Pokemon_Jaune
 Version: 1
 Summary: Une reproduction du jeu pokemon jaune avec python
-Home-page: UNKNOWN
 Author: Matteo Imbert
-License: UNKNOWN
-Platform: UNKNOWN
-
-UNKNOWN
-
+Requires-Dist: sqlalchemy
+Requires-Dist: pandas
+Requires-Dist: requests

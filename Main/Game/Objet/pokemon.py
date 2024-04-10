@@ -23,7 +23,7 @@ class Pokemon:
     """
     La classe d'un pokemon
     """
-    #def __init__(self,name):
+    def __init__(self,name):
      #    self.id = ''
     #     self._pkd_id = ''
     #     self.name = name
@@ -54,10 +54,10 @@ class Pokemon:
     #     self._do = None
     #     self._healthPoints = None
     
-    __tablename__ = "POKEMON"
+        __tablename__ = "POKEMON"
 
-    id: Mapped[int] = mapped_column(primary_key=True)
-    name: Mapped[str] = mapped_column(String(30))
+        id: Mapped[int] = mapped_column(primary_key=True)
+        name: Mapped[str] = mapped_column(String(30))
     
 
     def __repr__(self) -> str:
