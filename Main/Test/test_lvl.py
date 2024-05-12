@@ -90,7 +90,8 @@ def gen_stats(iv,ev,base_stats,xp):
             stats.append(pv)
     return stats
 
-
+for i in range(1,3):
+    print(i)
 
 ev = gen_ev()
 iv = gen_iv()
