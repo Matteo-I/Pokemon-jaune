@@ -21,13 +21,13 @@ class Map:
 
         self.switch_map(self.current_map)
 
-    def switch_map(self, map: str) -> None:
-        self.tmx_data = pytmx.load_pygame(f"Main/Game/Map/{Switch.name}.tmx")
+    def switch_map(self, switch: Switch) -> None:
+        self.tmx_data = pytmx.load_pygame(f"Main/Game/Map/{switch.get_name()}.tmx")
         map_data = pyscroll.data.TiledMapData(self.tmx_data)
         self.map_layer = pyscroll.BufferedRenderer(map_data, self.screen.get_size())
         self.group = pyscroll.PyscrollGroup(map_layer=self.map_layer, default_layer=7)
 
-        if Switch.name.split("_")[0] == "map":
+        if switch.get_name().split("_")[0] == "map":
             self.map_layer.zoom = 3
         else:
             self.map_layer.zoom = 3.75
@@ -35,20 +35,20 @@ class Map:
         self.switchs = []
 
         for obj in self.tmx_data.objects:
-            type = obj.name.split(" ")[0]
+            type = str(obj.name).split(" ")[0]
             if type == "switch":
                 self.switchs.append(Switch(
-                    type, obj.name.split(" ")[1], pygame.Rect(obj.x, obj.y, obj.width, obj.height), int(obj.name.split(" ")[-1])
+                    type, str(obj.name).split(" ")[1], pygame.Rect(obj.x, obj.y, obj.width, obj.height), int(obj.name.split(" ")[-1])
                 ))
 
         if self.player:
-            self.pose_player(Switch)
+            self.pose_player(switch)
             self.player.align_hitbox()
             self.player.step = 16
             self.player.add_switchs(self.switchs)
             self.group.add(self.player)
 
-        self.current_map = Switch
+        self.current_map = switch
 
 
     def add_player(self, player) -> None:

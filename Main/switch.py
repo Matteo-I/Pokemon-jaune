@@ -10,3 +10,9 @@ class Switch:
 
     def check_collision(self, temp_hitbox):
         return self.hitbox.colliderect(temp_hitbox)
+    
+    def get_name(self):
+        return self.name
+
+    def get_port(self):
+        return self.port

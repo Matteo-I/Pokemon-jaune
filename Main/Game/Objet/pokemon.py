@@ -12,7 +12,7 @@ from sqlalchemy.orm import Mapped
 from sqlalchemy.orm import mapped_column
 from sqlalchemy.orm import relationship
 
-local_file = "Main/Game/Data/Pokemons.csv"
+local_file = "Main/Game/Data/ressources/Pokemons.csv"
 pokemons = pd.read_csv(local_file, delimiter = ",")
 
 
