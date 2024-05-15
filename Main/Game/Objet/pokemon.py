@@ -5,8 +5,7 @@ import requests
 #sqlalchemy import
 from typing import List
 from typing import Optional
-from sqlalchemy import ForeignKey
-from sqlalchemy import String
+from sqlalchemy import ForeignKey,String,Integer
 from sqlalchemy.orm import DeclarativeBase
 from sqlalchemy.orm import Mapped
 from sqlalchemy.orm import mapped_column
@@ -19,51 +18,72 @@ pokemons = pd.read_csv(local_file, delimiter = ",")
 class Base(DeclarativeBase):
     pass
 
-class Pokemon:
+class Monster(Base):
+    __tablename__ = "POKEMON"
+
+    id: Mapped[int] = mapped_column(primary_key=True)
+    nb_pokedex: Mapped[int] = mapped_column(Integer)
+    name: Mapped[str] = mapped_column(String(30))
+    
+
+    def __repr__(self) -> str:
+        # return f"Pokemon(id={self.id!r}, name={self.name!r})"
+        return dir(self)
+    
+from sqlalchemy import create_engine
+from sqlalchemy.orm import Session
+from sqlalchemy import select
+engine = create_engine("sqlite:///Main/Game/Data/ressources/database.db", echo=True)
+Base.metadata.create_all(engine)
+with Session(engine) as session:
+    Pikachu = Monster(
+        id=84,
+        nb_pokedex=25,
+        name="PIKACHU",
+    )
+session.add_all([Pikachu])
+session.commit()
+session = Session(engine)
+stmt = select(Monster.name, Monster.nb_pokedex).where(Monster.id.in_([84]))
+for Monster in session.scalars(stmt):
+    print(Monster)
+
+
+class Pokemon():
     """
     La classe d'un pokemon
     """
     def __init__(self,name):
-     #    self.id = ''
-    #     self._pkd_id = ''
-    #     self.name = name
-    #     self._shape = ''
-    #     self._class = ''
-    #     self._type = []
-    #     self._base_xp = ''
-    #     self._type_xp = ''
-    #     self._evolution_lvl = ''
-    #     self._height = ''
-    #     self._weight = ''
-    #     self._color = ''
-    #     self._base_pv = ''
-    #     self._base_for = ''
-    #     self._base_def = ''
-    #     self._base_vit = ''
-    #     self._base_spe = ''
-    #     self._capture_rate = ''
-    #     self._description = ''
-    #     self._surname = ''
-    #     self._attaques = []
-    #     self._xp = None
-    #     self._lvl = lvl
-    #     self._iv = None
-    #     self._ev = None
-    #     self._stats = None
-    #     self._statut = None
-    #     self._do = None
-    #     self._healthPoints = None
-    
-        __tablename__ = "POKEMON"
+        self.id = ''
+        self._pkd_id = ''
+        self.name = name
+        self._shape = ''
+        self._class = ''
+        self._type = []
+        self._base_xp = ''
+        self._type_xp = ''
+        self._evolution_lvl = ''
+        self._height = ''
+        self._weight = ''
+        self._color = ''
+        self._base_pv = ''
+        self._base_for = ''
+        self._base_def = ''
+        self._base_vit = ''
+        self._base_spe = ''
+        self._capture_rate = ''
+        self._description = ''
+        self._surname = ''
+        self._attaques = []
+        self._xp = None
+        self._lvl = lvl
+        self._iv = None
+        self._ev = None
+        self._stats = None
+        self._statut = None
+        self._do = None
+        self._healthPoints = None
 
-        id: Mapped[int] = mapped_column(primary_key=True)
-        name: Mapped[str] = mapped_column(String(30))
-    
-
-    def __repr__(self) -> str:
-         return f"Pokmeon(id={self.id!r}, name={self.name!r})"
-
-    
     def get_id(self):
         return self._id
 
@@ -393,13 +413,3 @@ class Pokemon:
     def get_pv(self):
         pv = self.get_stats()[4]
         return pv
-
-    
-from sqlalchemy import create_engine
-from sqlalchemy.orm import Session
-engine = create_engine("sqlite://", echo=True)
-Base.metadata.create_all(engine)
-with Session(engine) as session:
-    Pikachu = Pokemon(name="PIKACHU")
-    session.add_all([Pikachu])
-    session.commit()
