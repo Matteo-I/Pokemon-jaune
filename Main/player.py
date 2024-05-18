@@ -8,7 +8,7 @@ from switch import Switch
 
 class Player(Entity):
     def __init__(self, keylistener: KeyListener, screen: Screen, x: int, y: int):
-        super().__init__(keylistener, screen, x, y)
+        super().__init__(keylistener, screen, 150, 0)
         self.pokedollars: int = 0
 
         self.switchs: list[Switch] | None = None
