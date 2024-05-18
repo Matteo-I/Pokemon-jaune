@@ -37,6 +37,35 @@ class Monster(Base):
     def __repr__(self) -> str:
         # return f"Pokemon(id={self.id!r}, name={self.name!r})"
         return dir(self)
+    
+class Monster_save(Base):
+    __tablename__ = "POKEMON_SAVED"
+
+    id_save: Mapped[int] = mapped_column(primary_key=True)
+    id: Mapped[int] = mapped_column(Integer)
+    surnom: Mapped[str] = mapped_column(String(12))
+    attaque_1_id: Mapped[Optional[int]] = mapped_column(Integer)
+    attaque_2_id: Mapped[Optional[int]] = mapped_column(Integer)
+    attaque_3_id: Mapped[Optional[int]] = mapped_column(Integer)
+    attaque_4_id: Mapped[Optional[int]] = mapped_column(Integer)
+    xp: Mapped[int] = mapped_column(Integer)
+    iv_pv: Mapped[int] = mapped_column(Integer)
+    iv_force: Mapped[int] = mapped_column(Integer)
+    iv_defence: Mapped[int] = mapped_column(Integer)
+    iv_vitesse: Mapped[int] = mapped_column(Integer)
+    iv_special: Mapped[int] = mapped_column(Integer)
+    ev_pv: Mapped[int] = mapped_column(Integer)
+    ev_force: Mapped[int] = mapped_column(Integer)
+    ev_defence: Mapped[int] = mapped_column(Integer)
+    ev_vitesse: Mapped[int] = mapped_column(Integer)
+    ev_special: Mapped[int] = mapped_column(Integer)
+    statut: Mapped[Optional[str]] = mapped_column(String(12))
+    do: Mapped[Optional[str]] = mapped_column(String(12))
+    pv: Mapped[int] = mapped_column(Integer)
+
+    def __repr__(self) -> str:
+        # return f"Pokemon(id={self.id!r}, name={self.name!r})"
+        return dir(self)
 
 sql_data="Main/Game/Data/ressources/pokemon.db"
 csv_data = "Main/Game/Data/ressources/Pokemons.csv"
@@ -52,7 +81,6 @@ def replace(nb):
     else:
         return float(nb)
 
-    
 def check(val):
     if isinstance(val,int) or isinstance(val,float) and val > 0:
         return int(val)
@@ -87,8 +115,7 @@ def create_sql_database(pokemons_datas):
             description=pokemons_datas.values[i][19],
             )
         session.add_all([Poke])
-        session.commit()
-            
+        session.commit()    
 
 if not "pokemon.db" in os.listdir('Main/Game/Data/ressources'):
     Base.metadata.create_all(engine)
@@ -101,6 +128,11 @@ class Pokemon():
     """
     def __init__(self,id,surname = None, attaques = [],xp = None,iv = None,ev = None,statut = None,do = None,pv = 0):
         self.id = id
+        self._do = do
+        self._healthPoints = pv
+        self._surname = surname if surname is not None else self.name
+        self._attaques = attaques
+        self._statut = statut
         self._pkd_id = self.get_pokedex_id()
         self.name = self.get_name()
         self._shape = self.get_shape()
@@ -117,18 +149,15 @@ class Pokemon():
         self._base_def = self.get_base_def()
         self._base_vit = self.get_base_vit()
         self._base_spe = self.get_base_spe()
-        self._capture_rate = self.get_capture_rate()
+        self._base_capture_rate = self.get_base_capture_rate()
         self._description = self.get_description()
-        self._surname = surname if surname is not None else self.name
-        self._attaques = attaques
         self._xp = xp if xp is not None else self.get_base_xp()
         self._lvl = self.get_level_from_xp()
         self._iv = iv if iv is not None else self.gen_iv()
         self._ev = ev if ev is not None else self.gen_evs()
         self._stats = self.gen_stats()
-        self._statut = statut
-        self._do = do
-        self._healthPoints = pv
+        self._capture_rate = self.get_capture_rate()
+        
 
     def get_id(self):
         return self.id
@@ -209,13 +238,43 @@ class Pokemon():
         with Session(engine) as session:
             return session.scalar(select(Monster.special).where(Monster.id == self.id))
     
-    def get_capture_rate(self):
+    def get_base_capture_rate(self):
         with Session(engine) as session:
             return session.scalar(select(Monster.taux_capture).where(Monster.id == self.id))
 
     def get_description(self):
         with Session(engine) as session:
             return session.scalar(select(Monster.description).where(Monster.id == self.id))
+        
+    def get_capture_rate(self, ball=None):
+        ball_bonus = {
+            'pokeball': 1,
+            'greatball': 1.5,
+            'safariball' : 1.5,
+            'ultraball': 2,
+        }
+
+        bonus_statut = 0
+        statut = self.get_statut()
+        if statut in ['bruler', 'poison', 'paralyser']:
+            bonus_statut = 1
+        elif statut in ['sommeil', 'geler']:
+            bonus_statut = 2
+
+        if ball is None or ball not in ball_bonus:
+            bonus_ball = 1
+            if ball == 'masterball':
+                return 100
+        else:
+            bonus_ball = ball_bonus[ball]
+            
+
+        # Formule de capture de Pokémon Jaune
+        capture_rate = ((3 * self.get_pv() - 2 * self.get_health_points()) * min((self.get_base_capture_rate() * 2.95 * bonus_ball),752) / (3 * self.get_pv())) * max((5.75 *bonus_statut),1)
+        # Limite le taux de capture à 100%
+        self._capture_rate = min(round(capture_rate/10, 2), 100)
+        return self._capture_rate
+
 
     def set_surname(self,new_surname):
         """
@@ -258,6 +317,14 @@ class Pokemon():
         if self._healthPoints > self.get_pv():
             self._healthPoints = self.get_pv()
         self._healthPoints = self.get_health_points()
+        self._capture_rate = self.get_base_capture_rate
+    
+    def damage(self,nb):
+        self._healthPoints -= nb
+        if self._healthPoints < 0:
+            self._healthPoints = 0
+        self._healthPoints = self.get_health_points()
+        self._capture_rate = self.get_base_capture_rate
     
     def get_attaque(self):
         return self._attaques
@@ -326,15 +393,21 @@ class Pokemon():
         '''
         return l'xp necessaire pour monter au niveau suivant
         '''
+        if self.get_lvl() == 100:
+            return 0
         xp = self.get_xp()
         return self.get_xp_from_lvl(self.get_lvl()+1)-xp
     
-    def xp_add(self,nb):
+    def add_xp(self,nb):
         self._xp += nb
+        pre_pv = self.get_pv()
+        pre_hp = float(self.get_health_points())
+        print(pre_hp,pre_pv)
         if self._xp > self.get_xp_from_lvl(100):
             self._xp = self.get_xp_from_lvl(100)
         self._lvl = self.get_level_from_xp()
         self._stats = self.gen_stats()
+        self._healthPoints= (((pre_hp*100)/pre_pv)/100)*self.get_pv()
 
     def gen_iv(self):
         '''
@@ -488,6 +561,11 @@ class Pokemon():
         pv = self.get_stats()[4]
         return pv
     
+    def save_pokemon(self):
+        
+        
+        pass
+    
     def __repr__(self) -> str:
         return (f"Pokemon("f"id={self.get_id()}\n,"
           f"name={self.get_name()}\n,"
@@ -500,7 +578,7 @@ class Pokemon():
           f"color={self.get_color()}\n,"
           f"description={self.get_description()}\n,"
           f"do={self.get_do()}\n,"
-          f"capture rate={self.get_capture_rate()}\n,"
+          f"type={self.get_type()}\n,"
           f"xp={self.get_xp()}\n,"
           f"base xp ={self.get_base_xp()}\n,"
           f"xp type={self.get_type_xp()}\n,"
@@ -508,6 +586,8 @@ class Pokemon():
           f"xp to next level={self.get_next_level()}\n,"
           f"level evolution={self.get_evolution_lvl()}\n,"
           f"attaque={self.get_attaque()}\n,"
+          f"base capture rate={self.get_base_capture_rate()}\n,"
+          f"capture rate={self.get_capture_rate()}\n,"
           f"base stats={self.get_bases_stats()}\n,"
           f"stats={self.get_stats()}\n,"
           f"iv={self.get_ivs()}\n,"
@@ -515,7 +595,9 @@ class Pokemon():
           f"health={self.get_health_points()}\n,"
           f"statut={self.get_statut()})")
     
-pikachu = Pokemon(154)
-print(pikachu)
+pokemon = Pokemon(84,'poketest', [],660451,[15,15,15,15,15],None,None,"Dev",150)
+print(pokemon)
+pokemon.add_xp(200000)
+print(pokemon.get_health_points())
 
 
