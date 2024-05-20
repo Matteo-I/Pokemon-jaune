@@ -9,7 +9,10 @@ setup(
     install_requires=[
         "sqlalchemy",
         "pandas",
-        "requests"
+        "requests",
+        "pygame",
+        "pytmx",
+        "pyscroll"
         ],
     zip_safe=False,
 )

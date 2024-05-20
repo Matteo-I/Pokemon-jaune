@@ -3,7 +3,7 @@ import os
 import pandas as pd
 #sqlalchemy import
 from typing import List,Optional
-from sqlalchemy import ForeignKey,String,Integer,Float,select,create_engine
+from sqlalchemy import ForeignKey,String,Integer,Float,select,create_engine,func
 from sqlalchemy.orm import DeclarativeBase,Mapped,mapped_column,relationship,Session
 
 
@@ -334,33 +334,33 @@ class Pokemon():
         '''
         return le niveau du pokemon en fonction de son xp actuelle et de sa courbe d'xp
         '''
-        xp = self.get_xp()-self.get_base_xp()
-        i,lvl = 0,1
+        xp = self.get_xp()
+        i,lvl = 0,0
         xp_type = self.nb_type_xp()
         if xp_type==1:
             #Courbe rapide
-            while i<xp:
+            while i<=xp:
                 lvl+=1
                 i=(lvl**3)*0.8
-            return lvl
+            return lvl-1
         elif xp_type==2:
             #Courbe moyenne
-            while i<xp:
+            while i<=xp:
                 lvl+=1
                 i=lvl**3
-            return lvl
+            return lvl-1
         elif xp_type==3:
             #Courbe parabolique
-            while i<xp:
+            while i<=xp:
                 lvl+=1
                 i=1.2*(lvl**3)-15*(lvl**2)+100*lvl-140
-            return lvl
+            return lvl-1
         else:
             #Courbe lente
-            while i<xp:
+            while i<=xp:
                 lvl+=1
                 i=1.25*(lvl**3)
-            return lvl
+            return lvl-1
     
     def get_lvl(self):
         return self._lvl
@@ -371,19 +371,18 @@ class Pokemon():
         Cette methode sert uniquement a la generation d'un pokemon avec un niveau defini
         '''
         xp_type = self.nb_type_xp()
-        base_xp = self.get_base_xp()
         if xp_type==1:
             #Courbe rapide
-            result= base_xp+((lvl**3)*0.8)
+            result= ((lvl**3)*0.8)
         elif xp_type==2:
             #Courbe moyenne
-            result= base_xp+(lvl**3)
+            result= (lvl**3)
         elif xp_type==3:
             #Courbe parabolique
-            result= base_xp+(1.2*(lvl**3)-15*(lvl**2)+100*lvl-140)
+            result= (1.2*(lvl**3)-15*(lvl**2)+100*lvl-140)
         else:
             #Courbe lente
-            result= base_xp+(1.25*(lvl**3))
+            result= (1.25*(lvl**3))
         return int(result)
     
     def get_xp(self):
@@ -407,7 +406,10 @@ class Pokemon():
             self._xp = self.get_xp_from_lvl(100)
         self._lvl = self.get_level_from_xp()
         self._stats = self.gen_stats()
-        self._healthPoints= (((pre_hp*100)/pre_pv)/100)*self.get_pv()
+        ratio_pv = (((pre_hp*100)/pre_pv)/100)
+        if ratio_pv>1:
+            ratio_pv = 1
+        self._healthPoints= ratio_pv*self.get_pv()
 
     def gen_iv(self):
         '''
@@ -562,9 +564,43 @@ class Pokemon():
         return pv
     
     def save_pokemon(self):
+        db_path = 'Main/Game/Data/save/pokemon_save.db'
+        engine = create_engine(f"sqlite:///{db_path}", echo=False)
         
+        if not os.path.exists(db_path):
+            Base.metadata.create_all(engine)
         
-        pass
+        with Session(engine) as session:
+            max_id_save = session.query(func.max(Monster_save.id_save)).scalar()
+            if max_id_save is None:
+                max_id_save = 0  # Si aucune entrée n'existe, commencez à 0
+            new_id_save = max_id_save + 1
+        
+            Poke = Monster_save(
+            id_save=new_id_save,
+            id=self.get_id(),
+            surnom=self.get_surname(),
+            attaque_1_id=None,
+            attaque_2_id=None,
+            attaque_3_id=None,
+            attaque_4_id=None,
+            xp=self.get_xp(),
+            iv_pv=self.get_iv_pv(),
+            iv_force=self.get_iv_for(),
+            iv_defence=self.get_iv_def(),
+            iv_vitesse=self.get_iv_vit(),
+            iv_special=self.get_iv_spe(),
+            ev_pv=self.get_ev_pv(),
+            ev_force=self.get_ev_for(),
+            ev_defence=self.get_ev_def(),
+            ev_vitesse=self.get_ev_vit(),
+            ev_special=self.get_ev_spe(),
+            statut=self.get_statut(),
+            do=self.get_do(),
+            pv=self.get_health_points(),
+            )
+        session.add_all([Poke])
+        session.commit()
     
     def __repr__(self) -> str:
         return (f"Pokemon("f"id={self.get_id()}\n,"
@@ -595,9 +631,8 @@ class Pokemon():
           f"health={self.get_health_points()}\n,"
           f"statut={self.get_statut()})")
     
-pokemon = Pokemon(84,'poketest', [],660451,[15,15,15,15,15],None,None,"Dev",150)
+pokemon = Pokemon(84,'Pika', [85,87,98,86],173705,[15,15,15,15,15],None,None,"Matteo",127)
 print(pokemon)
-pokemon.add_xp(200000)
-print(pokemon.get_health_points())
+pokemon.save_pokemon()
 
 

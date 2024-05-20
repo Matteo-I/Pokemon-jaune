@@ -10,7 +10,7 @@ class Entity(pygame.sprite.Sprite):
         self.keylistener: KeyListener = keylistener
         self.spritesheet: pygame.image = pygame.image.load("Main/Game/Data/sprites/characters/hero/red.png")
         self.image: pygame.image = Tool.split_image(self.spritesheet, 17, 1, 16, 16)
-        self.position: pygame.math.Vector2 = pygame.math.Vector2(x +560, y+784)
+        self.position: pygame.math.Vector2 = pygame.math.Vector2(104, 164)
         self.rect: pygame.Rect = self.image.get_rect()
         self.all_images: dict[str, list[pygame.image]] = self.get_all_images()
         self.index_image: int = 0
@@ -20,10 +20,12 @@ class Entity(pygame.sprite.Sprite):
 
         self.step: int = 0
         self.animation_walk: bool = False
-        self.direction: str = "down"
+        self.direction: str = "up"
 
         self.animtion_step_time: float = 0.0
         self.action_animation: int = 5
+
+    
 
     def update(self) -> None:
         self.animation_sprite()
