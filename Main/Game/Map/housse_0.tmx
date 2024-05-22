@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<map version="1.10" tiledversion="1.10.2" orientation="orthogonal" renderorder="right-down" width="16" height="16" tilewidth="16" tileheight="16" infinite="0" nextlayerid="12" nextobjectid="19">
+<map version="1.10" tiledversion="1.10.2" orientation="orthogonal" renderorder="right-down" width="16" height="16" tilewidth="16" tileheight="16" infinite="0" nextlayerid="12" nextobjectid="20">
  <tileset firstgid="1" source="tiles/Game Boy GBC - Pokemon Yellow - Pallet Town housse.tsx"/>
  <group id="4" name="layer 0">
   <layer id="5" name="ground" width="16" height="16">
@@ -84,7 +84,7 @@
   </layer>
  </group>
  <group id="3" name="objets">
-  <objectgroup id="10" name="Interface" visible="0">
+  <objectgroup id="10" name="Interface">
    <object id="3" name="switch map_0 0" x="96" y="192" width="32" height="16"/>
    <object id="5" name="spawn map_0 0" x="96" y="192">
     <point/>

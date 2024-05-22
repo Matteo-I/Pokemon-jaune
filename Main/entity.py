@@ -10,10 +10,10 @@ class Entity(pygame.sprite.Sprite):
         self.keylistener: KeyListener = keylistener
         self.color: str = color
         self.spritesheet: pygame.image = pygame.image.load(f"Main/Game/Data/sprites/characters/hero/{color}_player.png")
-        self.image: pygame.image = Tool.split_image(self.spritesheet, 17, 1, 16, 16)
+        self.image: pygame.image = Tool.split_image(self.spritesheet, 16, 0, 16, 16)
         self.position: pygame.math.Vector2 = pygame.math.Vector2(104, 164)
         self.rect: pygame.Rect = self.image.get_rect()
-        self.all_images: dict[str, list[pygame.image]] = self.get_all_images()
+        self.all_images: dict[str, list[pygame.image]] = self.get_all_images(self.spritesheet)
         self.index_image: int = 0
         self.image_part: int = 0
         self.reset_animation: bool = False
@@ -25,6 +25,8 @@ class Entity(pygame.sprite.Sprite):
 
         self.animtion_step_time: float = 0.0
         self.action_animation: int = 5
+
+        self.speed: int = 1
 
     
 
@@ -61,15 +63,15 @@ class Entity(pygame.sprite.Sprite):
         if self.animation_walk:
             self.animtion_step_time += self.screen.get_delta_time()
             if self.step < 16 and self.animtion_step_time >= self.action_animation:
-                self.step += 1
+                self.step += self.speed
                 if self.direction == "left":
-                    self.position.x -= 1
+                    self.position.x -= self.speed
                 elif self.direction == "right":
-                    self.position.x += 1
+                    self.position.x += self.speed
                 elif self.direction == "up":
-                    self.position.y -= 1
+                    self.position.y -= self.speed
                 elif self.direction == "down":
-                    self.position.y += 1
+                    self.position.y += self.speed
                 self.animtion_step_time = 0
             elif self.step >= 16:
                 self.step = 0
@@ -94,13 +96,8 @@ class Entity(pygame.sprite.Sprite):
             self.hitbox.midbottom = self.rect.midbottom
         self.position = pygame.math.Vector2(self.rect.center)
     
-    def change_color(self, color_name: str) -> None:
-        color_path = f"Main/Game/Data/sprites/characters/hero/{color_name}_player.png"
-        self.spritesheet = pygame.image.load(color_path)
-        self.all_images = self.get_all_images()
-        self.image = self.all_images[self.direction][self.index_image]
 
-    def get_all_images(self):
+    def get_all_images(self,spritesheet) -> dict[str, list[pygame.image]]:
         all_images = {
             "down": [],
             "left": [],
@@ -108,21 +105,21 @@ class Entity(pygame.sprite.Sprite):
             "up": []
         }
 
-        all_images["down"].append(Tool.split_image(self.spritesheet, 17, 0, 16, 16))
-        all_images["down"].append(Tool.split_image(self.spritesheet, 0, 0, 16, 16))
-        all_images["down"].append(Tool.split_image(self.spritesheet, 17, 0, 16, 16))
-        all_images["down"].append(Tool.split_image(self.spritesheet, 34, 0, 16, 16))
-        all_images["up"].append(Tool.split_image(self.spritesheet, 68, 0, 16, 16))
-        all_images["up"].append(Tool.split_image(self.spritesheet, 51, 0, 16, 16))
-        all_images["up"].append(Tool.split_image(self.spritesheet, 68, 0, 16, 16))
-        all_images["up"].append(Tool.split_image(self.spritesheet, 85, 0, 16, 16))
-        all_images["left"].append(Tool.split_image(self.spritesheet, 102, 0, 16, 16))
-        all_images["left"].append(Tool.split_image(self.spritesheet, 119, 0, 16, 16))
-        all_images["left"].append(Tool.split_image(self.spritesheet, 102, 0, 16, 16))
-        all_images["left"].append(Tool.split_image(self.spritesheet, 119, 0, 16, 16))
-        all_images["right"].append(Tool.split_image(self.spritesheet, 136, 0, 16, 16))
-        all_images["right"].append(Tool.split_image(self.spritesheet, 153, 0, 16, 16))
-        all_images["right"].append(Tool.split_image(self.spritesheet, 136, 0, 16, 16))
-        all_images["right"].append(Tool.split_image(self.spritesheet, 153, 0, 16, 16))
+        all_images["down"].append(Tool.split_image(spritesheet, 17, 0, 16, 16))
+        all_images["down"].append(Tool.split_image(spritesheet, 0, 0, 16, 16))
+        all_images["down"].append(Tool.split_image(spritesheet, 17, 0, 16, 16))
+        all_images["down"].append(Tool.split_image(spritesheet, 34, 0, 16, 16))
+        all_images["up"].append(Tool.split_image(spritesheet, 68, 0, 16, 16))
+        all_images["up"].append(Tool.split_image(spritesheet, 51, 0, 16, 16))
+        all_images["up"].append(Tool.split_image(spritesheet, 68, 0, 16, 16))
+        all_images["up"].append(Tool.split_image(spritesheet, 85, 0, 16, 16))
+        all_images["left"].append(Tool.split_image(spritesheet, 102, 0, 16, 16))
+        all_images["left"].append(Tool.split_image(spritesheet, 119, 0, 16, 16))
+        all_images["left"].append(Tool.split_image(spritesheet, 102, 0, 16, 16))
+        all_images["left"].append(Tool.split_image(spritesheet, 119, 0, 16, 16))
+        all_images["right"].append(Tool.split_image(spritesheet, 136, 0, 16, 16))
+        all_images["right"].append(Tool.split_image(spritesheet, 153, 0, 16, 16))
+        all_images["right"].append(Tool.split_image(spritesheet, 136, 0, 16, 16))
+        all_images["right"].append(Tool.split_image(spritesheet, 153, 0, 16, 16))
         return all_images
         

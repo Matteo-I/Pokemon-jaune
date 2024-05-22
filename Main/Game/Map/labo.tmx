@@ -25,7 +25,7 @@
 0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
 </data>
  </layer>
- <objectgroup id="2" name="interface" visible="0">
+ <objectgroup id="2" name="interface">
   <object id="2" name="switch map_0 0" x="128" y="256" width="32" height="16"/>
   <object id="3" name="spawn map_0 0" x="128" y="256">
    <point/>
