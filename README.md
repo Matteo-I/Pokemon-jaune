@@ -1,2 +1,2 @@
 # Pokemon-jaune
-a little project 
+Projet de cours visant a recréé Pokémon Jaune avec python
