@@ -4,11 +4,12 @@ from screen import Screen
 from tool import Tool
 
 class Entity(pygame.sprite.Sprite):
-    def __init__(self, keylistener: KeyListener, screen: Screen, x: int, y: int):
+    def __init__(self, keylistener: KeyListener, screen: Screen, x: int, y: int, color: str):
         super().__init__()
         self.screen: Screen = screen
         self.keylistener: KeyListener = keylistener
-        self.spritesheet: pygame.image = pygame.image.load("Main/Game/Data/sprites/characters/hero/red.png")
+        self.color: str = color
+        self.spritesheet: pygame.image = pygame.image.load(f"Main/Game/Data/sprites/characters/hero/{color}_player.png")
         self.image: pygame.image = Tool.split_image(self.spritesheet, 17, 1, 16, 16)
         self.position: pygame.math.Vector2 = pygame.math.Vector2(104, 164)
         self.rect: pygame.Rect = self.image.get_rect()
@@ -92,6 +93,12 @@ class Entity(pygame.sprite.Sprite):
             self.rect.y -= 1
             self.hitbox.midbottom = self.rect.midbottom
         self.position = pygame.math.Vector2(self.rect.center)
+    
+    def change_color(self, color_name: str) -> None:
+        color_path = f"Main/Game/Data/sprites/characters/hero/{color_name}_player.png"
+        self.spritesheet = pygame.image.load(color_path)
+        self.all_images = self.get_all_images()
+        self.image = self.all_images[self.direction][self.index_image]
 
     def get_all_images(self):
         all_images = {

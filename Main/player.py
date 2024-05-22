@@ -1,4 +1,5 @@
 import pygame
+import pytmx
 
 from entity import Entity
 from keylistener import KeyListener
@@ -7,13 +8,16 @@ from switch import Switch
 
 
 class Player(Entity):
-    def __init__(self, keylistener: KeyListener, screen: Screen, x: int, y: int):
-        super().__init__(keylistener, screen, x, y)
+    def __init__(self, keylistener: KeyListener, screen: Screen, map: map, x: int, y: int):
+        super().__init__(keylistener, screen, x, y,color=map.current_map_color)
         self.pokedollars: int = 0
 
+        self.map = map
         self.switchs: list[Switch] | None = None
         self.collisions: list[pygame.Rect] | None = None
+        self.colors: list[pygame.Rect] | None = None
         self.change_map: Switch | None = None
+        self.current_map: Switch = Switch("switch", "chamber_0", pygame.Rect(0, 0, 0, 0), 0)
 
     def update(self) -> None:
         self.check_move()
@@ -26,6 +30,7 @@ class Player(Entity):
                 temp_hitbox.x -= 16
                 if not self.check_collisions(temp_hitbox):
                     self.check_collisions_switchs(temp_hitbox)
+                    self.check_collisions_colors(temp_hitbox)
                     self.move_left()
                 else:
                     self.direction = "left"
@@ -33,6 +38,7 @@ class Player(Entity):
                 temp_hitbox.x += 16
                 if not self.check_collisions(temp_hitbox):
                     self.check_collisions_switchs(temp_hitbox)
+                    self.check_collisions_colors(temp_hitbox)
                     self.move_right()
                 else:
                     self.direction = "right"
@@ -40,6 +46,7 @@ class Player(Entity):
                 temp_hitbox.y -= 16
                 if not self.check_collisions(temp_hitbox):
                     self.check_collisions_switchs(temp_hitbox)
+                    self.check_collisions_colors(temp_hitbox)
                     self.move_up()
                 else:
                     self.direction = "up"
@@ -47,12 +54,20 @@ class Player(Entity):
                 temp_hitbox.y += 16
                 if not self.check_collisions(temp_hitbox):
                     self.check_collisions_switchs(temp_hitbox)
+                    self.check_collisions_colors(temp_hitbox)
                     self.move_down()
                 else:
                     self.direction = "down"
 
+
     def add_switchs(self, switchs: list[Switch]):
         self.switchs = switchs
+    
+    def get_color_name(self, temp_hitbox: pygame.Rect) -> str:
+        for color in self.colors:
+            if temp_hitbox.colliderect(color.hitbox):
+                return color.name
+        return ""
 
     def check_collisions_switchs(self, temp_hitbox):
         if self.switchs:
@@ -63,6 +78,18 @@ class Player(Entity):
     
     def add_collisions(self, collisions):
         self.collisions = collisions
+    
+    def add_color(self, color):
+        self.colors = color
+    
+    def check_collisions_colors(self, temp_hitbox: pygame.Rect) -> bool:
+        if self.colors: 
+            for color in self.colors:
+                if color.check_collision(temp_hitbox):
+                    color_name = self.get_color_name(temp_hitbox)
+                    if color_name != self.map.current_map_color:
+                        self.map.hide_layer(color_name)
+        return None
     
     def check_collisions(self, temp_hitbox: pygame.Rect):
         for collision in self.collisions:

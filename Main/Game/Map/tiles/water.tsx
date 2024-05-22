@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<tileset version="1.10" tiledversion="1.10.2" name="Pallet_Town_water" tilewidth="16" tileheight="16" tilecount="96" columns="24">
- <image source="../../Data/sprites/place/Palette town/Pallet_Town_water.png" width="384" height="64"/>
+<tileset version="1.10" tiledversion="1.10.2" name="water" tilewidth="16" tileheight="16" tilecount="96" columns="24">
+ <image source="../../Data/sprites/place/Palette town/Pallet_Town_water.png" trans="bd8cff" width="384" height="64"/>
  <tile id="0">
   <animation>
    <frame tileid="4" duration="500"/>
